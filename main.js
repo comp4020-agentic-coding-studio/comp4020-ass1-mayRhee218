@@ -42,3 +42,25 @@ window.addEventListener("resize", () => {
 });
 
 updateActive();
+
+// Secondary interaction: each god card reveals its longer story on hover, and
+// on focus so the reveal works the same for a visitor who tabs through the
+// page instead of pointing a mouse at it.
+function openCard(card) {
+  card.setAttribute("aria-expanded", "true");
+  const story = card.querySelector(".god-story");
+  if (story) story.hidden = false;
+}
+
+function closeCard(card) {
+  card.setAttribute("aria-expanded", "false");
+  const story = card.querySelector(".god-story");
+  if (story) story.hidden = true;
+}
+
+document.querySelectorAll(".god").forEach((card) => {
+  card.addEventListener("mouseenter", () => openCard(card));
+  card.addEventListener("mouseleave", () => closeCard(card));
+  card.addEventListener("focusin", () => openCard(card));
+  card.addEventListener("focusout", () => closeCard(card));
+});

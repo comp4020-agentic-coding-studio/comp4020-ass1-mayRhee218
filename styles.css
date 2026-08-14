@@ -118,16 +118,20 @@ main {
     opacity 0.4s ease;
 }
 
+.god:hover,
+.god:focus-visible {
+  border-color: rgb(159 208 255 / 60%);
+  outline: none;
+}
+
 .realm.active .god {
   transform: translateY(0) scale(1);
   opacity: 1;
 }
 
 .god-icon {
-  width: 3.25rem;
-  height: 3.25rem;
-  fill: currentcolor;
-  color: #f0ede4;
+  width: 4.5rem;
+  height: 4.5rem;
 }
 
 .god-name {
@@ -145,4 +149,12 @@ main {
   margin: 0;
   opacity: 0.8;
   font-size: 0.95rem;
+}
+
+.god-story {
+  margin: 0.75rem 0 0;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgb(240 237 228 / 15%);
+  font-size: 0.9rem;
+  opacity: 0.85;
 }
