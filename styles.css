@@ -1,16 +1,152 @@
-body {
-  margin: 0;
-  padding: 2rem;
-  font-family: system-ui, sans-serif;
-  line-height: 1.6;
-  color: #1a1a1a;
+:root {
+  color-scheme: dark;
 }
 
-main {
-  max-width: 40rem;
-  margin: 0 auto;
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: #f0ede4;
+  background: #0e0b18;
+}
+
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 0.5rem;
+  background: #f0ede4;
+  color: #0e0b18;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0.5rem;
 }
 
 a {
-  color: #0b5fff;
+  color: #9fd0ff;
+}
+
+.site-header {
+  padding: 1rem 1.5rem;
+}
+
+.site-header nav a {
+  color: #f0ede4;
+  text-decoration: none;
+}
+
+/* The one thing that changes as the visitor scrolls. */
+.realm-indicator {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  padding: 0.75rem 1.5rem;
+  background: rgb(14 11 24 / 90%);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgb(240 237 228 / 20%);
+}
+
+.realm-indicator-label {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.realm-indicator-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.intro {
+  opacity: 0.85;
+  max-width: 34rem;
+}
+
+/* Each realm is tall enough that scrolling through it feels like descending
+   a level, matching the section height main.js uses to compute which realm
+   is active (90% of the viewport height). */
+.realm {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0.35;
+  transition: opacity 0.4s ease;
+}
+
+.realm.active {
+  opacity: 1;
+}
+
+.realm-heading {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.gods {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (width <= 40rem) {
+  .gods {
+    grid-template-columns: 1fr;
+  }
+}
+
+.god {
+  padding: 1.25rem;
+  border: 1px solid rgb(240 237 228 / 20%);
+  border-radius: 0.5rem;
+  transform: translateY(0.5rem) scale(0.98);
+  opacity: 0.6;
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+}
+
+.realm.active .god {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.god-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  stroke: currentcolor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: currentcolor;
+  color: #f0ede4;
+}
+
+.god-name {
+  margin: 0.75rem 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+.god-name .roman {
+  font-weight: 400;
+  opacity: 0.6;
+  font-size: 0.9rem;
+}
+
+.god-domain {
+  margin: 0;
+  opacity: 0.8;
+  font-size: 0.95rem;
 }
