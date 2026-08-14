@@ -124,12 +124,8 @@ main {
 }
 
 .god-icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  stroke: currentcolor;
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  width: 3.25rem;
+  height: 3.25rem;
   fill: currentcolor;
   color: #f0ede4;
 }
