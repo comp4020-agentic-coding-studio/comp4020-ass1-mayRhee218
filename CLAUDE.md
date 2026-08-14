@@ -1,9 +1,13 @@
 # COMP4020 prototype
 
-This is your starter repo for a COMP4020 prototype: a static site written in
-HTML/CSS/TypeScript that builds to plain HTML/CSS/JS and deploys to GitHub
-Pages. The **deployed site is what gets marked** --- not this repo, and not "it
-works on my machine". It's marked live in Chrome against the deployed URL at two
+This is your starter repo for a COMP4020 prototype. This week's stack is
+**bare**: hand-written HTML/CSS/JS, no bundler, no TypeScript in the prototype
+source. `pnpm build` (`scripts/build.ts`) just copies the site root into
+`dist/` --- there's no separate build step to reason about. (TypeScript stays
+for the template's own spec tests in `spec/`, which is infrastructure, not
+"the stack".) It deploys to GitHub Pages. The
+**deployed site is what gets marked** --- not this repo, and not "it works on
+my machine". It's marked live in Chrome against the deployed URL at two
 viewports --- 1920×1080 (desktop) and 390×844 (phone) --- and both count in
 full, so make that artefact good at both and use the checks below to know
 whether it is.
@@ -97,10 +101,11 @@ CI machine, not proof the site is fast for real users.
 
 ## The stack is swappable
 
-Out of the box this is plain HTML/CSS/TypeScript on Vite, and every `.html` file
-in the repo is a page: add pages, link them, and the build picks them up with no
-config. That's a default, not a rule (unless the week's spec says otherwise).
-You can swap in Astro or any other static generator, because nothing in CI names
+This week it's plain HTML/CSS/JS with no bundler, and every file at the repo
+root that isn't template scaffolding is copied straight into `dist/` by
+`scripts/build.ts` --- add pages, link them, no config. That's a default, not a
+rule (unless the week's spec says otherwise). You can swap in Astro, Vite, or
+any other tool, because nothing in CI names
 a tool --- the whole contract is:
 
 - `pnpm build` emits the complete site into `dist/`
