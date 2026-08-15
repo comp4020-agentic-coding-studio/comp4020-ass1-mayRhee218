@@ -10,6 +10,18 @@ body {
   background: #0e0b18;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
 .skip-link {
   position: absolute;
   top: -3rem;
@@ -29,132 +41,399 @@ a {
 }
 
 .site-header {
+  position: absolute;
+  z-index: 20;
   padding: 1rem 1.5rem;
 }
 
 .site-header nav a {
   color: #f0ede4;
   text-decoration: none;
+  opacity: 0.75;
 }
 
-/* The one thing that changes as the visitor scrolls. */
+/* The one thing that changes as the visitor scrolls — kept small and out of
+   the way, a readout rather than a navigation bar. */
 .realm-indicator {
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  position: fixed;
+  z-index: 30;
+  right: 1rem;
+  bottom: 1rem;
   display: flex;
-  gap: 0.75rem;
-  align-items: baseline;
-  padding: 0.75rem 1.5rem;
-  background: rgb(14 11 24 / 90%);
-  backdrop-filter: blur(4px);
-  border-bottom: 1px solid rgb(240 237 228 / 20%);
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.15rem;
+  padding: 0.5rem 0.85rem;
+  background: rgb(14 11 24 / 55%);
+  backdrop-filter: blur(6px);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
 
-.realm-indicator-label {
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  opacity: 0.7;
+.realm-indicator:hover {
+  opacity: 1;
+}
+
+.realm-indicator-count {
+  opacity: 0.6;
 }
 
 .realm-indicator-name {
-  font-size: 1.1rem;
   font-weight: 600;
 }
 
 main {
-  max-width: 44rem;
-  margin: 0 auto;
-  padding: 0 1.5rem 4rem;
+  padding: 0;
 }
 
 .intro {
+  max-width: 32rem;
+  margin: 0 auto;
+  padding: 6rem 1.5rem 3rem;
+  text-align: center;
   opacity: 0.85;
-  max-width: 34rem;
+  font-size: 1.05rem;
 }
 
-/* Each realm is tall enough that scrolling through it feels like descending
-   a level, matching the section height main.js uses to compute which realm
-   is active (90% of the viewport height). */
+/* Each realm is a full-bleed cinematic stage: a background layer beneath,
+   the god figures and heading above, and enough height that scrolling
+   through it feels like passing through a place, not flipping a card. */
 .realm {
-  min-height: 90vh;
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  opacity: 0.35;
-  transition: opacity 0.4s ease;
+  overflow: hidden;
+  padding: 3rem 1.5rem;
 }
 
-.realm.active {
+.realm-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: linear-gradient(var(--bg-dir, 180deg), var(--bg-a), var(--bg-b));
+  opacity: 0.55;
+  transition: opacity 0.6s ease;
+}
+
+.realm.active .realm-bg {
   opacity: 1;
 }
 
-.realm-heading {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+.realm-art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.gods {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
+/* Per-realm colour arc: bright heavens down to the black of the underworld. */
+.realm[data-realm="0"] {
+  --bg-a: #2b4c7e;
+  --bg-b: #f7d488;
 }
 
-@media (width <= 40rem) {
-  .gods {
-    grid-template-columns: 1fr;
+.realm[data-realm="1"] {
+  --bg-a: #f2b84b;
+  --bg-b: #1b1f3b;
+  --bg-dir: 100deg;
+}
+
+.realm[data-realm="2"] {
+  --bg-a: #7d6fa8;
+  --bg-b: #d98c56;
+}
+
+.realm[data-realm="3"] {
+  --bg-a: #a8623f;
+  --bg-b: #2b1a16;
+}
+
+.realm[data-realm="4"] {
+  --bg-a: #cfe0a0;
+  --bg-b: #d9a13b;
+}
+
+.realm[data-realm="5"] {
+  --bg-a: #1a0f0a;
+  --bg-b: #7a2b12;
+}
+
+.realm[data-realm="6"] {
+  --bg-a: #1c6ea4;
+  --bg-b: #0a2f4a;
+}
+
+.realm[data-realm="7"] {
+  --bg-a: #0a2f4a;
+  --bg-b: #05121e;
+}
+
+.realm[data-realm="8"] {
+  --bg-a: #150f1e;
+  --bg-b: #0e0b18;
+}
+
+/* Background parallax: purely presentational, driven by --realm-progress
+   (set from window.scrollY in main.js). Layers at different "depths" move
+   at different rates as the visitor scrolls through the active realm. */
+.parallax {
+  transform: translateY(calc(var(--realm-progress, 0) * -1 * var(--depth, 30px)));
+  transition: transform 0.05s linear;
+}
+
+.parallax-slow {
+  --depth: 20px;
+}
+
+.parallax-mid {
+  --depth: 50px;
+}
+
+.parallax-fast {
+  --depth: 90px;
+}
+
+/* Particles: a handful of looping, low-key drifts per realm — clouds,
+   embers, bubbles, mist. Restrained counts and motion, not a full particle
+   system. */
+.particle {
+  position: absolute;
+  left: var(--x, 50%);
+  bottom: -8%;
+  pointer-events: none;
+  border-radius: 50%;
+  animation-duration: var(--dur, 20s);
+  animation-delay: var(--delay, 0s);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.particle-cloud {
+  width: 5rem;
+  height: 1.6rem;
+  bottom: auto;
+  top: 12%;
+  background: rgb(255 255 255 / 55%);
+  border-radius: 999px;
+  filter: blur(2px);
+  animation-name: drift-x;
+}
+
+.particle-star {
+  top: var(--x, 20%);
+  left: auto;
+  right: var(--x, 20%);
+  width: 0.2rem;
+  height: 0.2rem;
+  background: #fff;
+  animation-name: twinkle;
+  animation-duration: var(--dur, 4s);
+}
+
+.particle-smoke {
+  width: 1.2rem;
+  height: 1.2rem;
+  background: rgb(180 175 170 / 45%);
+  filter: blur(3px);
+  animation-name: rise-fade;
+}
+
+.particle-pollen {
+  width: 0.35rem;
+  height: 0.35rem;
+  background: #e3b94f;
+  animation-name: rise-fade;
+}
+
+.particle-ember {
+  width: 0.4rem;
+  height: 0.4rem;
+  background: #ff9a3c;
+  box-shadow: 0 0 6px 2px rgb(255 154 60 / 70%);
+  animation-name: rise-fade;
+}
+
+.particle-bubble {
+  width: 0.6rem;
+  height: 0.6rem;
+  background: rgb(191 230 245 / 60%);
+  animation-name: rise-fade;
+}
+
+.particle-bubble-dim {
+  background: rgb(127 184 208 / 35%);
+}
+
+.particle-mist {
+  width: 10rem;
+  height: 4rem;
+  bottom: 20%;
+  background: rgb(180 170 200 / 12%);
+  filter: blur(6px);
+  animation-name: drift-x;
+}
+
+@keyframes drift-x {
+  0% { transform: translateX(-2rem); }
+  50% { transform: translateX(2rem); }
+  100% { transform: translateX(-2rem); }
+}
+
+@keyframes rise-fade {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-70vh);
+    opacity: 0;
   }
 }
 
-.god {
-  padding: 1.25rem;
-  border: 1px solid rgb(240 237 228 / 20%);
-  border-radius: 0.5rem;
-  transform: translateY(0.5rem) scale(0.98);
-  opacity: 0.6;
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+.realm-content {
+  position: relative;
+  z-index: 1;
+  max-width: 60rem;
+  text-align: center;
+}
+
+.realm-heading {
+  margin: 0 0 2rem;
+  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.realm-caption {
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.realm-gods {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+  gap: clamp(1.5rem, 6vw, 5rem);
+}
+
+.realm-gods-solo {
+  gap: 0;
+}
+
+.god-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20rem;
+  max-width: 48vw;
+  cursor: default;
+}
+
+.god-figure:focus-visible {
+  outline: 2px solid rgb(240 237 228 / 70%);
+  outline-offset: 8px;
+  border-radius: 1rem;
+}
+
+.god-art {
+  width: clamp(14rem, 30vw, 21rem);
+  height: auto;
+  filter: drop-shadow(0 0.5rem 1rem rgb(0 0 0 / 35%));
   transition:
-    transform 0.4s ease,
-    opacity 0.4s ease;
+    transform 0.35s ease,
+    filter 0.35s ease;
 }
 
-.god:hover,
-.god:focus-visible {
-  border-color: rgb(159 208 255 / 60%);
-  outline: none;
+.god-figure:hover .god-art,
+.god-figure:focus-visible .god-art {
+  transform: translateY(-0.35rem) scale(1.04);
+  filter: drop-shadow(0 0 1.5rem rgb(255 255 255 / 45%));
 }
 
-.realm.active .god {
-  transform: translateY(0) scale(1);
-  opacity: 1;
-}
-
-.god-icon {
-  width: 4.5rem;
-  height: 4.5rem;
+.god-shadow {
+  fill: #000;
+  opacity: 0.22;
 }
 
 .god-name {
-  margin: 0.75rem 0 0.25rem;
-  font-size: 1.1rem;
+  margin: 0.75rem 0 0.15rem;
+  font-size: 1.05rem;
 }
 
 .god-name .roman {
   font-weight: 400;
   opacity: 0.6;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .god-domain {
   margin: 0;
-  opacity: 0.8;
-  font-size: 0.95rem;
+  opacity: 0.75;
+  font-size: 0.85rem;
 }
 
 .god-story {
   margin: 0.75rem 0 0;
   padding-top: 0.75rem;
+  max-width: 20rem;
   border-top: 1px solid rgb(240 237 228 / 15%);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   opacity: 0.85;
+  text-align: left;
+}
+
+@media (width <= 40rem) {
+  .realm-gods {
+    gap: 2.5rem;
+  }
+
+  .god-figure {
+    max-width: 70vw;
+  }
+
+  /* Clears the fixed bottom-right indicator pill so it never sits on top of
+     the last god's text in a section. */
+  .realm {
+    padding-bottom: 5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parallax {
+    transform: none !important;
+  }
+
+  .particle {
+    animation: none !important;
+  }
+
+  .realm-bg,
+  .god-art {
+    transition: none !important;
+  }
 }

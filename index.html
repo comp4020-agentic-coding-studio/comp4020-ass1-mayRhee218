@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Twelve Olympians — a scroll-descent through Greek &amp; Roman myth</title>
+    <title>Greek Roman Gods and Goddesses — a scroll journey through Olympus</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -15,259 +15,972 @@
     </header>
 
     <div class="realm-indicator" data-testid="interaction" aria-live="polite">
-      <span class="realm-indicator-label">Realm <span data-role="realm-number">1</span> of 6</span>
-      <span class="realm-indicator-name" data-role="realm-name">The Heavens</span>
+      <span class="realm-indicator-count"><span data-role="realm-number">1</span>/9</span>
+      <span class="realm-indicator-name" data-role="realm-name">Olympus &amp; Sky</span>
     </div>
 
     <main id="main">
-      <h1>Twelve Olympians</h1>
+      <h1 class="visually-hidden">Greek Roman Gods and Goddesses</h1>
       <p class="intro">
-        Scroll to descend through the pantheon, realm by realm, from the sky down
-        to the wilder edges of Olympus. The indicator above tracks where you are.
+        Scroll to journey through nine realms of Greek and Roman myth — from the
+        golden light of Olympus, down through sea and shadow, to the gates of
+        the Underworld. Hover or focus a god to hear their story.
       </p>
 
+      <!-- Realm 0: Olympus & Sky — Zeus, Hera -->
       <section class="realm" data-realm="0" aria-labelledby="realm-0-heading">
-        <h2 id="realm-0-heading" class="realm-heading">The Heavens</h2>
-        <div class="gods">
-          <article class="god" data-god="zeus" data-testid="god-card" tabindex="0" aria-expanded="false">
-            <svg class="god-icon" viewBox="0 0 64 64" role="img" aria-label="Zeus, a bearded figure in a blue robe holding a golden thunderbolt overhead">
-              <circle cx="32" cy="14.4" r="6.4" fill="#e3ac7d" />
-              <path d="M22.4 57.6 L18.4 30.4 Q32 20 45.6 30.4 L41.6 57.6 Z" fill="#33407a" />
-              <path d="M24 19 Q32 4 40 19 Q40 12 32 10 Q24 12 24 19 Z" fill="#e3e0d6" />
-              <path d="M25.6 19 Q32 30 38.4 19 Q36 24 32 24 Q28 24 25.6 19 Z" fill="#e3e0d6" />
-              <path d="M52.8 6.4 L40 28.8 H48 L36.8 54.4 L59.2 22.4 H49.6 Z" fill="#f2c94c" />
-            </svg>
-            <h3 class="god-name">Zeus <span class="roman">/ Jupiter</span></h3>
-            <p class="god-domain">King of the gods; sky, thunder, and law.</p>
-            <p class="god-story" id="story-zeus" hidden>
-              King of Olympus after overthrowing his father Cronus, who had swallowed each of
-              his children at birth. Zeus escaped that fate, freed his siblings, and led the
-              Olympians to victory in the Titanomachy. He rules the sky and enforces oaths and
-              hospitality, hurling thunderbolts forged by the Cyclopes at those who break them.
-            </p>
-          </article>
-          <article class="god" data-god="hera" data-testid="god-card" tabindex="0" aria-expanded="false">
-            <svg class="god-icon" viewBox="0 0 64 64" role="img" aria-label="Hera, a robed figure wearing a golden crown and holding a sceptre">
-              <circle cx="32" cy="14.4" r="6.4" fill="#e3ac7d" />
-              <path d="M22.4 57.6 L18.4 30.4 Q32 20 45.6 30.4 L41.6 57.6 Z" fill="#1f6f6b" />
-              <path d="M24 19 Q32 4 40 19 Q40 12 32 10 Q24 12 24 19 Z" fill="#241a12" />
-              <path d="M24 9.6 L24 3.2 L28 8 L32 1.6 L36 8 L40 3.2 L40 9.6 Z" fill="#f2c94c" />
-              <rect x="46.4" y="16" width="3.2" height="38.4" fill="#f2c94c" />
-              <circle cx="48" cy="12.8" r="4" fill="#f2c94c" />
-            </svg>
-            <h3 class="god-name">Hera <span class="roman">/ Juno</span></h3>
-            <p class="god-domain">Queen of the gods; marriage and the family.</p>
-            <p class="god-story" id="story-hera" hidden>
-              Zeus's wife and sister, and queen of the gods, Hera guards marriage and the
-              sanctity of the household. Fiercely loyal and just as fiercely jealous, she
-              pursued Zeus's mortal lovers and their children across the myths, from Heracles
-              to Io, protecting her own status above all.
-            </p>
-          </article>
+        <div class="realm-bg" aria-hidden="true">
+          <svg class="realm-art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+            <circle class="parallax parallax-slow" cx="1280" cy="200" r="140" fill="#fff3cf" opacity="0.35" />
+            <g class="parallax parallax-mid" fill="#f7f2e4" opacity="0.55">
+              <ellipse cx="260" cy="620" rx="220" ry="60" />
+              <ellipse cx="120" cy="660" rx="150" ry="44" />
+              <ellipse cx="1180" cy="700" rx="260" ry="70" />
+              <ellipse cx="1360" cy="660" rx="150" ry="44" />
+            </g>
+            <g class="parallax parallax-fast" fill="#eef0f6" opacity="0.4">
+              <ellipse cx="620" cy="780" rx="240" ry="50" />
+              <ellipse cx="900" cy="820" rx="300" ry="60" />
+            </g>
+          </svg>
+          <span class="particle particle-cloud" style="--x: 12%; --delay: 0s; --dur: 26s"></span>
+          <span class="particle particle-cloud" style="--x: 40%; --delay: 6s; --dur: 32s"></span>
+          <span class="particle particle-cloud" style="--x: 68%; --delay: 3s; --dur: 28s"></span>
+          <span class="particle particle-cloud" style="--x: 85%; --delay: 10s; --dur: 34s"></span>
+        </div>
+        <div class="realm-content">
+          <h2 id="realm-0-heading" class="realm-heading">Olympus &amp; Sky</h2>
+          <div class="realm-gods">
+            <article class="god-figure" data-god="zeus" data-testid="god-card" tabindex="0" aria-expanded="false">
+              <svg class="god-art" viewBox="0 0 240 480" role="img" aria-label="Zeus, a bearded king mid-stride, silver hair and golden diadem, thunderbolt gripped overhead">
+                <defs>
+                  <linearGradient id="zeus-skin" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#f0c79a" /><stop offset="1" stop-color="#c98a52" />
+                  </linearGradient>
+                  <linearGradient id="zeus-tunic" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#4d5db0" /><stop offset="1" stop-color="#242f5e" />
+                  </linearGradient>
+                  <linearGradient id="zeus-sash" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#f9dc7a" /><stop offset="1" stop-color="#c9962f" />
+                  </linearGradient>
+                  <linearGradient id="zeus-bolt" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#fff6c9" /><stop offset="1" stop-color="#f2c94c" />
+                  </linearGradient>
+                  <linearGradient id="zeus-hair" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#e8e6de" /><stop offset="1" stop-color="#aca795" />
+                  </linearGradient>
+                </defs>
+                <ellipse class="god-shadow" cx="120" cy="460" rx="75" ry="14" />
+                <path d="M68 55 Q56 14 120 8 Q184 14 172 55 Q182 95 162 135 Q168 85 150 58 Q146 22 120 20 Q94 22 90 58 Q72 85 78 135 Q58 95 68 55 Z" fill="url(#zeus-hair)" />
+                <path d="M92 206 Q86 260 88 302 Q84 352 82 396 L96 396 Q104 352 106 302 Q100 258 116 206 Z" fill="url(#zeus-skin)" />
+                <path d="M124 206 Q132 258 134 302 Q136 352 138 396 L152 396 Q150 352 148 302 Q146 258 148 206 Z" fill="url(#zeus-skin)" />
+                <path d="M80 395 L98 395 L107 403 Q90 409 76 403 Z" fill="url(#zeus-skin)" />
+                <path d="M137 395 L155 395 L162 402 Q147 407 133 402 Z" fill="url(#zeus-skin)" />
+                <path class="god-tunic" d="M88 116 Q120 102 152 116 L160 188 Q120 214 82 190 Z" fill="url(#zeus-tunic)" />
+                <path d="M96 120 L112 120 L148 192 L132 192 Z" fill="url(#zeus-sash)" opacity="0.9" />
+                <path d="M98 140 Q120 148 142 138" stroke="#242f5e" stroke-width="3" fill="none" opacity="0.6" />
+                <path d="M94 165 Q120 176 146 162" stroke="#242f5e" stroke-width="3" fill="none" opacity="0.6" />
+                <path d="M108 92 L132 92 L138 116 L102 116 Z" fill="url(#zeus-skin)" />
+                <path d="M140 118 Q164 126 170 148 Q174 165 152 180 L140 170 Q156 162 154 148 Q148 132 130 120 Z" fill="url(#zeus-skin)" />
+                <ellipse cx="140" cy="185" rx="10" ry="8" fill="url(#zeus-skin)" />
+                <path d="M80 118 Q54 112 52 98 Q42 75 40 59 L60 55 Q66 76 70 98 Q84 108 100 122 Z" fill="url(#zeus-skin)" />
+                <ellipse cx="44" cy="49" rx="9" ry="12" fill="url(#zeus-skin)" transform="rotate(-20 44 49)" />
+                <path d="M34 33 Q31 22 38 17 Q41 27 36 37 Z M40 28 Q39 16 46 13 Q48 25 44 33 Z M47 28 Q49 16 56 17 Q55 28 49 35 Z M52 33 Q57 23 63 25 Q60 33 54 39 Z" fill="url(#zeus-skin)" />
+                <path d="M36 41 Q26 40 24 48 Q33 52 39 47 Z" fill="url(#zeus-skin)" />
+                <path d="M40 35 L64 13 L50 25 L76 3 L54 29 L70 27 L44 55 Z" fill="url(#zeus-bolt)" />
+                <ellipse cx="94" cy="62" rx="5" ry="8" fill="url(#zeus-skin)" />
+                <ellipse cx="146" cy="62" rx="5" ry="8" fill="url(#zeus-skin)" />
+                <path d="M96 50 Q94 26 120 24 Q146 26 144 50 Q144 76 130 94 Q120 102 110 94 Q96 76 96 50 Z" fill="url(#zeus-skin)" />
+                <path d="M102 54 L114 51" stroke="#2a1e14" stroke-width="3" stroke-linecap="round" />
+                <path d="M126 51 L138 54" stroke="#2a1e14" stroke-width="3" stroke-linecap="round" />
+                <path d="M101 60 Q108 55 115 60 Q108 65 101 60 Z" fill="#2a1e14" />
+                <path d="M125 60 Q132 55 139 60 Q132 65 125 60 Z" fill="#2a1e14" />
+                <path d="M120 62 L118 74 L122 74 Z" fill="#b8875a" />
+                <path d="M98 66 Q90 100 98 130 Q108 145 120 145 Q132 145 142 130 Q150 100 142 66 Q132 82 120 82 Q108 82 98 66 Z" fill="url(#zeus-hair)" />
+                <path d="M106 78 Q120 84 134 78 Q120 80 106 78 Z" fill="#aca795" />
+                <rect x="94" y="30" width="52" height="8" rx="3" fill="url(#zeus-sash)" />
+                <path d="M118 30 L120 18 L122 30 Z" fill="url(#zeus-sash)" />
+              </svg>
+              <h3 class="god-name">Zeus <span class="roman">/ Jupiter</span></h3>
+              <p class="god-domain">King of the gods; sky, thunder, and law.</p>
+              <p class="god-story" id="story-zeus" hidden>
+                King of Olympus after overthrowing his father Cronus, who had swallowed each of
+                his children at birth. Zeus escaped that fate, freed his siblings, and led the
+                Olympians to victory in the Titanomachy. He rules the sky and enforces oaths and
+                hospitality, hurling thunderbolts forged by the Cyclopes at those who break them.
+              </p>
+            </article>
+            <article class="god-figure" data-god="hera" data-testid="god-card" tabindex="0" aria-expanded="false">
+              <svg class="god-art" viewBox="0 0 240 480" role="img" aria-label="Hera, regal in a long fitted gown, jewelled diadem, gripping a golden sceptre planted at her side">
+                <defs>
+                  <linearGradient id="hera-skin" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#f0c79a" /><stop offset="1" stop-color="#c98a52" />
+                  </linearGradient>
+                  <linearGradient id="hera-gown" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#2a8f89" /><stop offset="1" stop-color="#123a38" />
+                  </linearGradient>
+                  <linearGradient id="hera-crown" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#f9dc7a" /><stop offset="1" stop-color="#c9962f" />
+                  </linearGradient>
+                  <linearGradient id="hera-hair" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#5a4030" /><stop offset="1" stop-color="#241a12" />
+                  </linearGradient>
+                </defs>
+                <ellipse class="god-shadow" cx="120" cy="460" rx="75" ry="14" />
+                <path d="M74 50 Q64 16 120 10 Q176 16 166 50 Q172 80 156 100 Q160 65 144 48 Q140 24 120 22 Q100 24 96 48 Q80 65 84 100 Q68 80 74 50 Z" fill="url(#hera-hair)" />
+                <path d="M84 95 Q70 130 78 175 Q90 170 88 140 Q92 110 96 95 Z" fill="url(#hera-hair)" />
+                <path d="M156 95 Q170 130 162 175 Q150 170 152 140 Q148 110 144 95 Z" fill="url(#hera-hair)" />
+                <path class="god-tunic" d="M84 116 Q120 100 156 116 L172 420 Q120 450 74 400 Z" fill="url(#hera-gown)" />
+                <ellipse cx="150" cy="428" rx="13" ry="7" fill="url(#hera-skin)" />
+                <path d="M108 92 L132 92 L138 116 L102 116 Z" fill="url(#hera-skin)" />
+                <path d="M84 120 Q64 132 60 158 Q56 180 66 208 L80 202 Q72 180 74 158 Q78 138 96 124 Z" fill="url(#hera-skin)" />
+                <ellipse cx="68" cy="212" rx="9" ry="12" fill="url(#hera-skin)" transform="rotate(10 68 212)" />
+                <path d="M58 204 Q50 202 48 210 Q54 216 60 212 Z M58 210 Q50 212 49 220 Q56 224 61 218 Z M60 216 Q53 220 54 228 Q61 230 64 222 Z" fill="url(#hera-skin)" />
+                <path d="M74 200 Q82 196 86 202 Q80 208 74 206 Z" fill="url(#hera-skin)" />
+                <line x1="86" y1="16" x2="50" y2="420" stroke="url(#hera-crown)" stroke-width="7" stroke-linecap="round" />
+                <path d="M86 2 L98 16 L86 30 L74 16 Z" fill="url(#hera-crown)" />
+                <path d="M136 122 Q158 130 164 154 Q168 175 156 198 L144 192 Q152 172 148 154 Q144 136 128 124 Z" fill="url(#hera-skin)" />
+                <ellipse cx="150" cy="200" rx="9" ry="11" fill="url(#hera-skin)" />
+                <ellipse cx="94" cy="62" rx="5" ry="8" fill="url(#hera-skin)" />
+                <ellipse cx="146" cy="62" rx="5" ry="8" fill="url(#hera-skin)" />
+                <path d="M96 50 Q94 26 120 24 Q146 26 144 50 Q144 76 130 94 Q120 102 110 94 Q96 76 96 50 Z" fill="url(#hera-skin)" />
+                <path d="M103 55 L114 53" stroke="#2a1a12" stroke-width="3" stroke-linecap="round" />
+                <path d="M126 53 L137 55" stroke="#2a1a12" stroke-width="3" stroke-linecap="round" />
+                <path d="M101 60 Q108 55 115 60 Q108 65 101 60 Z" fill="#2a1a12" />
+                <path d="M125 60 Q132 55 139 60 Q132 65 125 60 Z" fill="#2a1a12" />
+                <path d="M120 62 L118 73 L122 73 Z" fill="#c99a68" />
+                <path d="M110 84 Q120 90 130 84" stroke="#8a3a4a" stroke-width="3" stroke-linecap="round" fill="none" />
+                <rect x="92" y="28" width="56" height="7" rx="3" fill="url(#hera-crown)" />
+                <path d="M92 28 L86 12 L98 20 L108 4 L120 18 L132 4 L142 20 L154 12 L148 28 Z" fill="url(#hera-crown)" />
+              </svg>
+              <h3 class="god-name">Hera <span class="roman">/ Juno</span></h3>
+              <p class="god-domain">Queen of the gods; marriage and the family.</p>
+              <p class="god-story" id="story-hera" hidden>
+                Zeus's wife and sister, and queen of the gods, Hera guards marriage and the
+                sanctity of the household. Fiercely loyal and just as fiercely jealous, she
+                pursued Zeus's mortal lovers and their children across the myths, from Heracles
+                to Io, protecting her own status above all.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
+      <!-- Realm 1: Sun & Moon — Apollo, Artemis -->
       <section class="realm" data-realm="1" aria-labelledby="realm-1-heading">
-        <h2 id="realm-1-heading" class="realm-heading">Sea &amp; Harvest</h2>
-        <div class="gods">
-          <article class="god" data-god="poseidon" data-testid="god-card" tabindex="0" aria-expanded="false">
-            <svg class="god-icon" viewBox="0 0 64 64" role="img" aria-label="Poseidon, a bearded figure holding a bronze trident">
-              <circle cx="32" cy="14.4" r="6.4" fill="#d9a978" />
-              <path d="M22.4 57.6 L18.4 30.4 Q32 20 45.6 30.4 L41.6 57.6 Z" fill="#1c6ea4" />
-              <path d="M24 19 Q32 4 40 19 Q40 12 32 10 Q24 12 24 19 Z" fill="#b8c4c9" />
-              <path d="M25.6 19 Q32 30 38.4 19 Q36 24 32 24 Q28 24 25.6 19 Z" fill="#b8c4c9" />
-              <path d="M43.2 6.4 L43.2 19.2 L46.4 19.2 L46.4 54.4 L49.6 54.4 L49.6 19.2 L52.8 19.2 L52.8 6.4 L49.6 6.4 L49.6 14.4 L46.4 14.4 L46.4 6.4 Z" fill="#d7b56d" />
-            </svg>
-            <h3 class="god-name">Poseidon <span class="roman">/ Neptune</span></h3>
-            <p class="god-domain">The sea, earthquakes, and horses.</p>
-            <p class="god-story" id="story-poseidon" hidden>
-              Brother to Zeus and ruler of the seas, Poseidon can calm the waves or summon
-              storms and earthquakes with a strike of his trident. He contested Athens with
-              Athena and lost, but fathered the winged horse Pegasus and countless sea
-              creatures, and sailors prayed to him before every voyage.
-            </p>
-          </article>
-          <article class="god" data-god="demeter" data-testid="god-card" tabindex="0" aria-expanded="false">
-            <svg class="god-icon" viewBox="0 0 64 64" role="img" aria-label="Demeter, a robed figure cradling a golden wheat sheaf">
-              <circle cx="32" cy="14.4" r="6.4" fill="#e3ac7d" />
-              <path d="M22.4 57.6 L18.4 30.4 Q32 20 45.6 30.4 L41.6 57.6 Z" fill="#8a5a2b" />
-              <path d="M24 19 Q32 4 40 19 Q40 12 32 10 Q24 12 24 19 Z" fill="#e3b94f" />
-              <path d="M22.4 48 L19.2 28.8 L22.4 35.2 L24 27.2 L25.6 35.2 L27.2 25.6 L28.8 35.2 L30.4 27.2 L32 36.8 Z" fill="#c99a3a" />
-            </svg>
-            <h3 class="god-name">Demeter <span class="roman">/ Ceres</span></h3>
-            <p class="god-domain">Harvest, agriculture, and the growing seasons.</p>
-            <p class="god-story" id="story-demeter" hidden>
-              Goddess of the harvest and the grain, Demeter's grief for her daughter
-              Persephone, taken by Hades to the underworld, once left the earth barren through
-              winter. Her joy at Persephone's yearly return brings spring, tying the growing
-              seasons directly to a mother's love.
-            </p>
-          </article>
+        <div class="realm-bg" aria-hidden="true">
+          <svg class="realm-art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+            <g class="parallax parallax-slow" stroke="#ffdf8f" stroke-width="10" opacity="0.5">
+              <line x1="380" y1="120" x2="300" y2="40" />
+              <line x1="440" y1="90" x2="400" y2="0" />
+              <line x1="500" y1="120" x2="540" y2="30" />
+            </g>
+            <circle class="parallax parallax-slow" cx="400" cy="180" r="110" fill="#ffe9b0" opacity="0.8" />
+            <g class="parallax parallax-fast" fill="#d9e6ff" opacity="0.8">
+              <circle cx="1120" cy="120" r="5" />
+              <circle cx="1200" cy="220" r="4" />
+              <circle cx="1300" cy="90" r="3" />
+              <circle cx="1380" cy="180" r="5" />
+              <circle cx="1250" cy="300" r="3" />
+            </g>
+            <circle class="parallax parallax-mid" cx="1230" cy="170" r="70" fill="#cfd6da" opacity="0.85" />
+            <circle class="parallax parallax-mid" cx="1258" cy="150" r="58" fill="#0e0b18" />
+          </svg>
+          <span class="particle particle-star" style="--x: 78%; --delay: 0s; --dur: 5s"></span>
+          <span class="particle particle-star" style="--x: 84%; --delay: 1.4s; --dur: 4s"></span>
+          <span class="particle particle-star" style="--x: 90%; --delay: 2.1s; --dur: 6s"></span>
+          <span class="particle particle-star" style="--x: 72%; --delay: 3s; --dur: 4.5s"></span>
+        </div>
+        <div class="realm-content">
+          <h2 id="realm-1-heading" class="realm-heading">Sun &amp; Moon</h2>
+          <div class="realm-gods">
+            <article class="god-figure" data-god="apollo" data-testid="god-card" tabindex="0" aria-expanded="false">
+              <svg class="god-art" viewBox="0 0 240 480" role="img" aria-label="Apollo, neat golden hair crowned with sun rays, plucking a lyre held at his hip">
+                <defs>
+                  <linearGradient id="apollo-skin" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#f0c79a" /><stop offset="1" stop-color="#c98a52" />
+                  </linearGradient>
+                  <linearGradient id="apollo-tunic" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#e0b34a" /><stop offset="1" stop-color="#a97f28" />
+                  </linearGradient>
+                  <linearGradient id="apollo-sash" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#fff3d0" /><stop offset="1" stop-color="#e8c468" />
+                  </linearGradient>
+                  <linearGradient id="apollo-lyre" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#c99a6a" /><stop offset="1" stop-color="#8a5a2b" />
+                  </linearGradient>
+                  <linearGradient id="apollo-hair" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#e8c468" /><stop offset="1" stop-color="#c9962f" />
+                  </linearGradient>
+                </defs>
+                <ellipse class="god-shadow" cx="120" cy="460" rx="75" ry="14" />
+                <path d="M78 45 Q70 16 120 12 Q170 16 162 45 Q166 70 152 88 Q156 55 140 44 Q136 24 120 22 Q104 24 100 44 Q84 55 88 88 Q74 70 78 45 Z" fill="url(#apollo-hair)" />
+                <path d="M94 206 Q90 258 92 300 Q88 350 86 396 L100 396 Q106 350 108 300 Q102 258 118 206 Z" fill="url(#apollo-skin)" />
+                <path d="M122 206 Q130 258 132 300 Q134 350 136 396 L150 396 Q148 350 146 300 Q144 258 146 206 Z" fill="url(#apollo-skin)" />
+                <path d="M84 395 L102 395 L111 402 Q94 408 80 402 Z" fill="url(#apollo-skin)" />
+                <path d="M135 395 L153 395 L160 402 Q145 407 131 402 Z" fill="url(#apollo-skin)" />
+                <path class="god-tunic" d="M90 116 Q120 104 150 116 L156 210 Q120 232 84 206 Z" fill="url(#apollo-tunic)" />
+                <path d="M98 120 L112 120 L142 214 L128 214 Z" fill="url(#apollo-sash)" opacity="0.9" />
+                <path d="M100 145 Q120 152 138 143" stroke="#a97f28" stroke-width="3" fill="none" opacity="0.5" />
+                <path d="M96 172 Q120 182 142 170" stroke="#a97f28" stroke-width="3" fill="none" opacity="0.5" />
+                <path d="M108 92 L132 92 L138 116 L102 116 Z" fill="url(#apollo-skin)" />
+                <path d="M52 150 Q40 190 56 206 L62 200 Q52 186 60 158 Z M92 150 Q104 190 88 206 L82 200 Q92 186 84 158 Z M56 206 L88 206 L88 214 L56 214 Z" fill="url(#apollo-lyre)" />
+                <path d="M64 158 L64 206 M72 155 L72 206 M80 155 L80 206" stroke="url(#apollo-sash)" stroke-width="1.5" opacity="0.7" />
+                <path d="M84 120 Q62 128 60 152 Q58 168 74 186 L86 178 Q74 166 76 152 Q78 138 96 124 Z" fill="url(#apollo-skin)" />
+                <ellipse cx="72" cy="188" rx="9" ry="11" fill="url(#apollo-skin)" />
+                <path d="M140 120 Q124 126 118 140 Q110 148 100 156 L108 166 Q120 156 128 146 Q136 134 152 126 Z" fill="url(#apollo-skin)" />
+                <ellipse cx="100" cy="152" rx="8" ry="10" fill="url(#apollo-skin)" />
+                <path d="M92 148 Q86 144 84 150 Q90 154 94 152 Z" fill="url(#apollo-skin)" />
+                <ellipse cx="94" cy="62" rx="5" ry="8" fill="url(#apollo-skin)" />
+                <ellipse cx="146" cy="62" rx="5" ry="8" fill="url(#apollo-skin)" />
+                <path d="M96 50 Q94 26 120 24 Q146 26 144 50 Q144 76 130 94 Q120 102 110 94 Q96 76 96 50 Z" fill="url(#apollo-skin)" />
+                <path d="M103 55 L114 53" stroke="#8a5a2b" stroke-width="3" stroke-linecap="round" />
+                <path d="M126 53 L137 55" stroke="#8a5a2b" stroke-width="3" stroke-linecap="round" />
+                <path d="M101 60 Q108 55 115 60 Q108 65 101 60 Z" fill="#5c3a1a" />
+                <path d="M125 60 Q132 55 139 60 Q132 65 125 60 Z" fill="#5c3a1a" />
+                <path d="M120 62 L118 73 L122 73 Z" fill="#b8875a" />
+                <path d="M111 83 Q120 88 129 83" stroke="#8a4a2a" stroke-width="2.5" stroke-linecap="round" fill="none" />
+                <path d="M78 34 L90 12 L102 34 Z M105 26 L120 4 L135 26 Z M138 34 L150 12 L162 34 Z" fill="url(#apollo-sash)" />
+              </svg>
+              <h3 class="god-name">Apollo <span class="roman">/ Apollo</span></h3>
+              <p class="god-domain">Sun, music, and prophecy.</p>
+              <p class="god-story" id="story-apollo" hidden>
+                God of the sun, music, poetry, and prophecy, Apollo speaks through the oracle
+                at Delphi, which he claimed by slaying the serpent Python. Twin brother to
+                Artemis, he is the ideal of youthful beauty and reason among the Olympians, as
+                comfortable with a lyre as with a bow.
+              </p>
+            </article>
+            <article class="god-figure" data-god="artemis" data-testid="god-card" tabindex="0" aria-expanded="false">
+              <svg class="god-art" viewBox="0 0 240 480" role="img" aria-label="Artemis, windswept hair with a crescent moon clasp, drawing a silver bow with an arrow nocked">
+                <defs>
+                  <linearGradient id="artemis-skin" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#f0c79a" /><stop offset="1" stop-color="#c98a52" />
+                  </linearGradient>
+                  <linearGradient id="artemis-tunic" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#3f7a54" /><stop offset="1" stop-color="#1c3a26" />
+                  </linearGradient>
+                  <linearGradient id="artemis-sash" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#e8edf0" /><stop offset="1" stop-color="#9aa8ad" />
+                  </linearGradient>
+                  <linearGradient id="artemis-hair" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#6b4030" /><stop offset="1" stop-color="#3a2015" />
+                  </linearGradient>
+                </defs>
+                <ellipse class="god-shadow" cx="120" cy="460" rx="75" ry="14" />
+                <path d="M76 48 Q66 16 120 10 Q174 16 164 48 Q172 75 185 100 Q168 70 150 50 Q145 22 120 20 Q95 22 90 50 Q68 78 55 105 Q64 78 76 48 Z" fill="url(#artemis-hair)" />
+                <path d="M92 206 Q86 258 88 300 Q83 350 80 396 L94 396 Q102 350 104 300 Q98 258 116 206 Z" fill="url(#artemis-skin)" />
+                <path d="M122 206 Q131 258 133 300 Q136 350 139 396 L153 396 Q150 350 148 300 Q145 258 146 206 Z" fill="url(#artemis-skin)" />
+                <path d="M78 395 L96 395 L105 402 Q88 408 74 402 Z" fill="url(#artemis-skin)" />
+                <path d="M136 395 L154 395 L161 402 Q146 407 132 402 Z" fill="url(#artemis-skin)" />
+                <path class="god-tunic" d="M92 116 Q120 104 148 116 L154 208 Q120 228 86 202 Z" fill="url(#artemis-tunic)" />
+                <path d="M98 120 L110 120 L138 210 L126 210 Z" fill="url(#artemis-sash)" opacity="0.9" />
+                <path d="M100 143 Q120 150 136 141" stroke="#1c3a26" stroke-width="3" fill="none" opacity="0.5" />
+                <path d="M96 168 Q120 178 140 166" stroke="#1c3a26" stroke-width="3" fill="none" opacity="0.5" />
+                <path d="M108 92 L132 92 L138 116 L102 116 Z" fill="url(#artemis-skin)" />
+                <path d="M84 120 Q60 114 42 102 Q34 97 28 94 L34 106 Q42 112 58 120 Q72 128 100 126 Z" fill="url(#artemis-skin)" />
+                <ellipse cx="30" cy="98" rx="9" ry="11" fill="url(#artemis-skin)" transform="rotate(-60 30 98)" />
+                <path d="M20 90 Q14 88 13 95 Q19 99 24 95 Z M22 96 Q16 96 16 103 Q22 106 26 101 Z" fill="url(#artemis-skin)" />
+                <path d="M30 20 Q10 100 30 180" fill="none" stroke="url(#artemis-sash)" stroke-width="5" />
+                <path d="M30 20 L30 180" stroke="#e8edf0" stroke-width="1.5" opacity="0.8" />
+                <path d="M6 96 L60 100" stroke="#9aa8ad" stroke-width="3" stroke-linecap="round" />
+                <path d="M6 96 L2 93 L2 99 Z" fill="#9aa8ad" />
+                <path d="M140 120 Q166 114 176 100 Q180 92 172 84 L162 92 Q168 100 158 108 Q148 116 128 124 Z" fill="url(#artemis-skin)" />
+                <ellipse cx="168" cy="88" rx="8" ry="10" fill="url(#artemis-skin)" />
+                <ellipse cx="94" cy="62" rx="5" ry="8" fill="url(#artemis-skin)" />
+                <ellipse cx="146" cy="62" rx="5" ry="8" fill="url(#artemis-skin)" />
+                <path d="M96 50 Q94 26 120 24 Q146 26 144 50 Q144 76 130 94 Q120 102 110 94 Q96 76 96 50 Z" fill="url(#artemis-skin)" />
+                <path d="M148 22 Q160 18 162 30 Q154 36 146 30 Q152 26 148 22 Z" fill="#e8edf0" />
+                <path d="M102 54 L114 52" stroke="#5a3a24" stroke-width="3" stroke-linecap="round" />
+                <path d="M126 52 L138 54" stroke="#5a3a24" stroke-width="3" stroke-linecap="round" />
+                <path d="M101 60 Q108 55 115 60 Q108 65 101 60 Z" fill="#3a2015" />
+                <path d="M125 60 Q132 55 139 60 Q132 65 125 60 Z" fill="#3a2015" />
+                <path d="M120 62 L118 73 L122 73 Z" fill="#b8875a" />
+                <path d="M112 84 L128 84" stroke="#8a5a3a" stroke-width="2.5" stroke-linecap="round" />
+              </svg>
+              <h3 class="god-name">Artemis <span class="roman">/ Diana</span></h3>
+              <p class="god-domain">The hunt, the moon, and the wilderness.</p>
+              <p class="god-story" id="story-artemis" hidden>
+                Goddess of the hunt, the moon, and the wilderness, Artemis was born first and
+                helped deliver her twin brother Apollo. Fiercely protective of her chastity and
+                her wild places, she turned the hunter Actaeon into a stag for glimpsing her
+                bathing, and roams the forests with a retinue of nymphs.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
+      <!-- Realm 2: Between Realms — Hermes (solo) -->
       <section class="realm" data-realm="2" aria-labelledby="realm-2-heading">
-        <h2 id="realm-2-heading" class="realm-heading">Wisdom &amp; War</h2>
-        <div class="gods">
-          <article class="god" data-god="athena" data-testid="god-card" tabindex="0" aria-expanded="false">
-            <svg class="god-icon" viewBox="0 0 64 64" role="img" aria-label="Athena, a helmeted figure with an owl on her shoulder">
-              <circle cx="32" cy="14.4" r="6.4" fill="#e3ac7d" />
-              <path d="M22.4 57.6 L18.4 30.4 Q32 20 45.6 30.4 L41.6 57.6 Z" fill="#52617a" />
-              <path d="M21 20 Q32 4 43 20 L43 25 Q32 18.5 21 25 Z" fill="#9aa5ad" />
-              <path d="M20.8 9.6 Q32 3.2 43.2 9.6 L38.4 12.8 Q32 9.6 25.6 12.8 Z" fill="#b23b3b" />
-              <circle cx="54.4" cy="36.8" r="6.4" fill="#6b4a2f" />
-              <path d="M50.4 32 L52.8 25.6 L55.2 32 Z M53.6 32 L56 25.6 L58.4 32 Z" fill="#6b4a2f" />
-              <path d="M52.8 40.8 L54.4 44 L56 40.8 Z" fill="#e3b94f" />
-            </svg>
-            <h3 class="god-name">Athena <span class="roman">/ Minerva</span></h3>
-            <p class="god-domain">Wisdom, strategy, and crafts.</p>
-            <p class="god-story" id="story-athena" hidden>
-              Born fully armed from Zeus's forehead after he swallowed her mother Metis,
-              Athena is goddess of wisdom, strategy, and crafts. She won Athens by gifting the
-              olive tree, championed clever heroes like Odysseus, and is rarely seen without
-              her owl and her aegis shield.
-            </p>
-          </article>
-          <article class="god" data-god="ares" data-testid="god-card" tabindex="0" aria-expanded="false">
-            <svg class="god-icon" viewBox="0 0 64 64" role="img" aria-label="Ares, a robed figure with an iron shield and spear">
-              <circle cx="32" cy="14.4" r="6.4" fill="#d9a978" />
-              <path d="M22.4 57.6 L18.4 30.4 Q32 20 45.6 30.4 L41.6 57.6 Z" fill="#7a2626" />
-              <path d="M24 19 Q32 4 40 19 Q40 12 32 10 Q24 12 24 19 Z" fill="#241a12" />
-              <ellipse cx="11.2" cy="38.4" rx="6.4" ry="9.6" fill="#7d7d7d" />
-              <path d="M52.8 6.4 L56 9.6 L24 54.4 L20.8 51.2 Z" fill="#7d7d7d" />
-            </svg>
-            <h3 class="god-name">Ares <span class="roman">/ Mars</span></h3>
-            <p class="god-domain">War, and the brutal side of it.</p>
-            <p class="god-story" id="story-ares" hidden>
-              God of war in its rawest, bloodiest form, Ares delights in the chaos of battle
-              rather than the strategy behind it, which is why Athena regularly bests him.
-              Feared more than loved by the other Olympians, his affair with Aphrodite
-              produced children who would themselves come to embody love and strife.
-            </p>
-          </article>
+        <div class="realm-bg" aria-hidden="true">
+          <svg class="realm-art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+            <g class="parallax parallax-mid" stroke="#f0ede4" stroke-width="6" fill="none" opacity="0.35">
+              <path d="M100 300 Q220 280 340 300" />
+              <path d="M1200 220 Q1320 200 1440 220" />
+              <path d="M900 500 Q1020 480 1140 500" />
+            </g>
+            <g class="parallax parallax-fast" fill="#f0ede4" opacity="0.4">
+              <path d="M500 160 l24 -10 l24 10 l-24 6 Z" />
+              <path d="M560 190 l20 -8 l20 8 l-20 5 Z" />
+            </g>
+          </svg>
+          <span class="particle particle-cloud" style="--x: 20%; --delay: 2s; --dur: 30s"></span>
+          <span class="particle particle-cloud" style="--x: 55%; --delay: 8s; --dur: 24s"></span>
+          <span class="particle particle-cloud" style="--x: 80%; --delay: 4s; --dur: 28s"></span>
+        </div>
+        <div class="realm-content">
+          <h2 id="realm-2-heading" class="realm-heading">Between Realms</h2>
+          <div class="realm-gods realm-gods-solo">
+            <article class="god-figure" data-god="hermes" data-testid="god-card" tabindex="0" aria-expanded="false">
+              <svg class="god-art" viewBox="0 0 240 480" role="img" aria-label="Hermes, leaping mid-stride with a winged helmet, caduceus raised overhead and winged sandals">
+                <defs>
+                  <linearGradient id="hermes-skin" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#e6bb85" /><stop offset="1" stop-color="#b8814f" />
+                  </linearGradient>
+                  <linearGradient id="hermes-tunic" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#c56a38" /><stop offset="1" stop-color="#7a3a1a" />
+                  </linearGradient>
+                  <linearGradient id="hermes-wing" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#e8edf0" /><stop offset="1" stop-color="#9aa8ad" />
+                  </linearGradient>
+                  <linearGradient id="hermes-hair" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#4a3020" /><stop offset="1" stop-color="#2a1810" />
+                  </linearGradient>
+                </defs>
+                <ellipse class="god-shadow" cx="120" cy="460" rx="75" ry="14" />
+                <path d="M82 46 Q74 18 120 14 Q166 18 158 46 Q162 68 148 84 Q152 55 138 45 Q134 26 120 24 Q106 26 102 45 Q88 55 92 84 Q78 68 82 46 Z" fill="url(#hermes-hair)" />
+                <path d="M96 206 Q80 230 88 254 Q94 274 116 282 Q108 268 104 250 Q100 228 114 206 Z" fill="url(#hermes-skin)" />
+                <path d="M126 206 Q140 250 148 296 Q154 340 158 386 L172 384 Q166 336 160 292 Q152 246 140 206 Z" fill="url(#hermes-skin)" />
+                <path d="M96 278 L118 282 L124 292 Q104 296 88 288 Z" fill="url(#hermes-skin)" />
+                <path d="M156 384 L174 382 L182 390 Q164 396 150 390 Z" fill="url(#hermes-skin)" />
+                <path d="M92 268 Q68 258 66 276 Q84 282 96 274 Z" fill="url(#hermes-wing)" />
+                <path d="M162 372 Q186 362 190 380 Q170 388 158 378 Z" fill="url(#hermes-wing)" />
+                <path class="god-tunic" d="M90 112 Q120 100 150 112 L158 206 Q120 224 86 200 Z" fill="url(#hermes-tunic)" />
+                <path d="M98 116 L110 116 L140 210 L126 210 Z" fill="url(#hermes-wing)" opacity="0.9" />
+                <path d="M100 140 Q120 148 138 138" stroke="#7a3a1a" stroke-width="3" fill="none" opacity="0.5" />
+                <path d="M96 165 Q120 176 140 163" stroke="#7a3a1a" stroke-width="3" fill="none" opacity="0.5" />
+                <path d="M108 92 L132 92 L138 116 L102 116 Z" fill="url(#hermes-skin)" />
+                <path d="M140 116 Q164 108 174 84 Q180 68 176 40 L164 44 Q168 68 160 82 Q152 100 128 122 Z" fill="url(#hermes-skin)" />
+                <ellipse cx="172" cy="38" rx="8" ry="10" fill="url(#hermes-skin)" />
+                <path d="M162 30 Q156 26 155 33 Q161 37 166 33 Z M164 36 Q158 36 158 43 Q164 46 168 41 Z" fill="url(#hermes-skin)" />
+                <path d="M172 6 L172 96" stroke="url(#hermes-wing)" stroke-width="4" />
+                <path d="M172 12 Q150 2 156 22 Q168 24 172 16 Z M172 12 Q194 2 188 22 Q176 24 172 16 Z" fill="url(#hermes-wing)" />
+                <path d="M172 20 Q160 35 172 50 Q184 65 172 80" stroke="#6b8a5a" stroke-width="2.5" fill="none" />
+                <path d="M172 20 Q184 35 172 50 Q160 65 172 80" stroke="#6b8a5a" stroke-width="2.5" fill="none" opacity="0.8" />
+                <path d="M100 116 Q76 122 66 142 Q58 156 54 170 L64 176 Q70 158 78 146 Q88 132 108 122 Z" fill="url(#hermes-skin)" />
+                <ellipse cx="56" cy="172" rx="8" ry="10" fill="url(#hermes-skin)" />
+                <path d="M84 38 Q60 24 66 46 Q80 48 88 40 Z" fill="url(#hermes-wing)" />
+                <path d="M156 38 Q180 24 174 46 Q160 48 152 40 Z" fill="url(#hermes-wing)" />
+                <ellipse cx="94" cy="62" rx="5" ry="8" fill="url(#hermes-skin)" />
+                <ellipse cx="146" cy="62" rx="5" ry="8" fill="url(#hermes-skin)" />
+                <path d="M96 50 Q94 26 120 24 Q146 26 144 50 Q144 76 130 94 Q120 102 110 94 Q96 76 96 50 Z" fill="url(#hermes-skin)" />
+                <path d="M103 54 L114 52" stroke="#7a4a2a" stroke-width="3" stroke-linecap="round" />
+                <path d="M126 52 L137 54" stroke="#7a4a2a" stroke-width="3" stroke-linecap="round" />
+                <path d="M101 60 Q108 55 115 60 Q108 65 101 60 Z" fill="#2a1810" />
+                <path d="M125 60 Q132 55 139 60 Q132 65 125 60 Z" fill="#2a1810" />
+                <path d="M120 62 L118 73 L122 73 Z" fill="#b8875a" />
+                <path d="M110 83 Q120 87 131 82" stroke="#7a4a2a" stroke-width="2.5" stroke-linecap="round" fill="none" />
+              </svg>
+              <h3 class="god-name">Hermes <span class="roman">/ Mercury</span></h3>
+              <p class="god-domain">Messenger of the gods; travel and trade.</p>
+              <p class="god-story" id="story-hermes" hidden>
+                Messenger of the gods and guide of travellers, Hermes moves between Olympus,
+                earth, and the underworld on winged sandals. Clever from birth — he stole
+                Apollo's cattle as an infant and invented the lyre from a tortoise shell to make
+                amends — he is also the god of thieves, merchants, and boundaries.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
+      <!-- Realm 3: Human World & War — Athena, Ares -->
       <section class="realm" data-realm="3" aria-labelledby="realm-3-heading">
-        <h2 id="realm-3-heading" class="realm-heading">Forge &amp; Love</h2>
-        <div class="gods">
-          <article class="god" data-god="hephaestus" data-testid="god-card" tabindex="0" aria-expanded="false">
-            <svg class="god-icon" viewBox="0 0 64 64" role="img" aria-label="Hephaestus, a robed figure holding an iron hammer">
-              <circle cx="32" cy="14.4" r="6.4" fill="#c98a52" />
-              <path d="M22.4 57.6 L18.4 30.4 Q32 20 45.6 30.4 L41.6 57.6 Z" fill="#5c3a1e" />
-              <path d="M24 19 Q32 4 40 19 Q40 12 32 10 Q24 12 24 19 Z" fill="#241a12" />
-              <rect x="44.8" y="41.6" width="11.2" height="6.4" fill="#7d7d7d" />
-              <rect x="48.8" y="25.6" width="3.2" height="22.4" fill="#7d7d7d" />
-            </svg>
-            <h3 class="god-name">Hephaestus <span class="roman">/ Vulcan</span></h3>
-            <p class="god-domain">Fire, the forge, and craftsmanship.</p>
-            <p class="god-story" id="story-hephaestus" hidden>
-              Lame from birth and thrown from Olympus by an ashamed Hera, Hephaestus became
-              the gods' master smith anyway, forging Zeus's thunderbolts, Achilles' armour,
-              and automatons of gold. Married to Aphrodite, he built his forge beneath
-              volcanoes, where the Cyclopes worked his bellows.
-            </p>
-          </article>
-          <article class="god" data-god="aphrodite" data-testid="god-card" tabindex="0" aria-expanded="false">
-            <svg class="god-icon" viewBox="0 0 64 64" role="img" aria-label="Aphrodite, a robed figure crowned with a scallop shell">
-              <circle cx="32" cy="14.4" r="6.4" fill="#e8c39a" />
-              <path d="M22.4 57.6 L18.4 30.4 Q32 20 45.6 30.4 L41.6 57.6 Z" fill="#c9678f" />
-              <path d="M24 19 Q32 6 40 19 Q40 12 32 10 Q24 12 24 19 Z" fill="#e8c468" />
-              <path d="M16 19.2 Q32 0 48 19.2 Q40 12.8 32 14.4 Q24 12.8 16 19.2 Z" fill="#f2d9c4" />
-            </svg>
-            <h3 class="god-name">Aphrodite <span class="roman">/ Venus</span></h3>
-            <p class="god-domain">Love, beauty, and desire.</p>
-            <p class="god-story" id="story-aphrodite" hidden>
-              Goddess of love, beauty, and desire, Aphrodite was born from sea-foam off
-              Cyprus. Married to Hephaestus but drawn to Ares, her golden apple to Paris in
-              the judgment of the goddesses set off the chain of events that led to the
-              Trojan War.
-            </p>
-          </article>
+        <div class="realm-bg" aria-hidden="true">
+          <svg class="realm-art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+            <path class="parallax parallax-mid" d="M0 620 L120 520 L260 600 L420 480 L600 590 L800 500 L1000 610 L1200 500 L1400 600 L1600 540 L1600 900 L0 900 Z" fill="#3a2420" opacity="0.7" />
+            <g class="parallax parallax-fast" fill="#8a8378" opacity="0.3">
+              <ellipse cx="260" cy="560" rx="90" ry="30" />
+              <ellipse cx="980" cy="580" rx="120" ry="34" />
+              <ellipse cx="1340" cy="540" rx="80" ry="24" />
+            </g>
+          </svg>
+          <span class="particle particle-smoke" style="--x: 22%; --delay: 0s; --dur: 14s"></span>
+          <span class="particle particle-smoke" style="--x: 48%; --delay: 4s; --dur: 16s"></span>
+          <span class="particle particle-smoke" style="--x: 74%; --delay: 8s; --dur: 15s"></span>
+        </div>
+        <div class="realm-content">
+          <h2 id="realm-3-heading" class="realm-heading">Human World &amp; War</h2>
+          <div class="realm-gods">
+            <article class="god-figure" data-god="athena" data-testid="god-card" tabindex="0" aria-expanded="false">
+              <svg class="god-art" viewBox="0 0 240 480" role="img" aria-label="Athena, in bronze pteruges armor, spear planted and shield raised, crested helmet with an owl perched at her shoulder">
+                <defs>
+                  <linearGradient id="athena-skin" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#f0c79a" /><stop offset="1" stop-color="#c98a52" />
+                  </linearGradient>
+                  <linearGradient id="athena-gown" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#6b7a94" /><stop offset="1" stop-color="#37455c" />
+                  </linearGradient>
+                  <linearGradient id="athena-spear" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#c3cbd1" /><stop offset="1" stop-color="#7d8890" />
+                  </linearGradient>
+                  <linearGradient id="athena-shield" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#c94f4f" /><stop offset="1" stop-color="#7a2222" />
+                  </linearGradient>
+                  <linearGradient id="athena-hair" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#3a2e22" /><stop offset="1" stop-color="#1c150e" />
+                  </linearGradient>
+                </defs>
+                <ellipse class="god-shadow" cx="120" cy="460" rx="75" ry="14" />
+                <path d="M92 216 Q86 262 88 300 Q84 348 82 396 L96 396 Q104 348 106 300 Q100 260 116 216 Z" fill="url(#athena-skin)" />
+                <path d="M124 216 Q132 260 134 300 Q136 348 138 396 L152 396 Q150 348 148 300 Q146 260 148 216 Z" fill="url(#athena-skin)" />
+                <path d="M80 395 L98 395 L107 402 Q90 408 76 402 Z" fill="url(#athena-skin)" />
+                <path d="M138 395 L156 395 L163 402 Q148 407 134 402 Z" fill="url(#athena-skin)" />
+                <path class="god-tunic" d="M88 116 Q120 102 152 116 L158 180 Q120 196 82 178 Z" fill="url(#athena-gown)" />
+                <path d="M86 178 L100 178 L98 216 L84 216 Z M100 178 L114 178 L113 218 L99 218 Z M114 178 L126 178 L126 218 L114 218 Z M126 178 L140 178 L141 218 L127 218 Z M140 178 L154 178 L156 216 L142 216 Z" fill="url(#athena-gown)" />
+                <path d="M96 130 Q120 138 144 128" stroke="#37455c" stroke-width="3" fill="none" opacity="0.5" />
+                <path d="M120 116 L120 176" stroke="#2a3444" stroke-width="2" opacity="0.6" />
+                <path d="M108 92 L132 92 L138 116 L102 116 Z" fill="url(#athena-skin)" />
+                <path d="M142 120 Q164 116 172 98 Q178 84 168 62 L156 66 Q164 84 158 96 Q150 108 128 126 Z" fill="url(#athena-skin)" />
+                <ellipse cx="150" cy="58" rx="8" ry="10" fill="url(#athena-skin)" />
+                <path d="M150 20 L150 254" stroke="url(#athena-spear)" stroke-width="5" />
+                <path d="M144 20 L150 2 L156 20 Z" fill="url(#athena-spear)" />
+                <path d="M98 120 Q70 114 52 100 Q42 92 38 88 L46 78 Q54 90 66 100 Q80 110 106 126 Z" fill="url(#athena-skin)" />
+                <ellipse cx="40" cy="88" rx="8" ry="10" fill="url(#athena-skin)" />
+                <circle cx="40" cy="86" r="34" fill="url(#athena-shield)" stroke="#2a3444" stroke-width="4" />
+                <circle cx="40" cy="86" r="10" fill="#e3b94f" />
+                <path d="M18 66 Q10 76 18 86 Q10 96 18 106" stroke="#2a3444" stroke-width="2" fill="none" opacity="0.6" />
+                <ellipse cx="170" cy="130" rx="12" ry="15" fill="#8a7255" />
+                <path d="M162 118 L165 110 L168 119 Z M172 119 L175 110 L178 118 Z" fill="#8a7255" />
+                <circle cx="166" cy="126" r="3" fill="#1c150e" /><circle cx="174" cy="126" r="3" fill="#1c150e" />
+                <path d="M168 132 L170 136 L172 132 Z" fill="#e3b94f" />
+                <ellipse cx="120" cy="88" rx="16" ry="10" fill="url(#athena-hair)" />
+                <ellipse cx="94" cy="62" rx="5" ry="8" fill="url(#athena-skin)" />
+                <ellipse cx="146" cy="62" rx="5" ry="8" fill="url(#athena-skin)" />
+                <path d="M96 50 Q94 26 120 24 Q146 26 144 50 Q144 76 130 94 Q120 102 110 94 Q96 76 96 50 Z" fill="url(#athena-skin)" />
+                <path d="M103 55 L114 52" stroke="#5c3a1a" stroke-width="3" stroke-linecap="round" />
+                <path d="M126 52 L137 55" stroke="#5c3a1a" stroke-width="3" stroke-linecap="round" />
+                <path d="M101 60 Q108 55 115 60 Q108 65 101 60 Z" fill="#241a12" />
+                <path d="M125 60 Q132 55 139 60 Q132 65 125 60 Z" fill="#241a12" />
+                <path d="M120 62 L118 73 L122 73 Z" fill="#b8875a" />
+                <path d="M112 84 L128 84" stroke="#8a4a2a" stroke-width="2.5" stroke-linecap="round" />
+                <path d="M80 26 Q120 2 160 26 Q166 52 154 72 Q120 56 86 72 Q74 52 80 26 Z" fill="url(#athena-spear)" />
+                <path d="M117 12 Q120 4 123 12 L129 46 Q120 52 111 46 Z" fill="url(#athena-shield)" />
+                <path d="M160 40 Q166 60 158 76 L148 70 Q154 56 150 42 Z" fill="url(#athena-spear)" />
+                <path d="M118 44 L116 70 L124 70 L122 44 Z" fill="url(#athena-spear)" />
+              </svg>
+              <h3 class="god-name">Athena <span class="roman">/ Minerva</span></h3>
+              <p class="god-domain">Wisdom, strategy, and crafts.</p>
+              <p class="god-story" id="story-athena" hidden>
+                Born fully armed from Zeus's forehead after he swallowed her mother Metis,
+                Athena is goddess of wisdom, strategy, and crafts. She won Athens by gifting the
+                olive tree, championed clever heroes like Odysseus, and is rarely seen without
+                her owl and her aegis shield.
+              </p>
+            </article>
+            <article class="god-figure" data-god="ares" data-testid="god-card" tabindex="0" aria-expanded="false">
+              <svg class="god-art" viewBox="0 0 240 480" role="img" aria-label="Ares, dark-cropped hair and a scarred brow, lunging with a shield raised and a spear thrust overhead">
+                <defs>
+                  <linearGradient id="ares-skin" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#e6bb85" /><stop offset="1" stop-color="#b8814f" />
+                  </linearGradient>
+                  <linearGradient id="ares-tunic" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#a63f3f" /><stop offset="1" stop-color="#5c1717" />
+                  </linearGradient>
+                  <linearGradient id="ares-iron" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#9d9d9d" /><stop offset="1" stop-color="#5c5c5c" />
+                  </linearGradient>
+                  <linearGradient id="ares-hair" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#2a1810" /><stop offset="1" stop-color="#140a05" />
+                  </linearGradient>
+                </defs>
+                <ellipse class="god-shadow" cx="120" cy="460" rx="75" ry="14" />
+                <path d="M90 210 Q78 246 82 280 Q78 330 74 396 L90 396 Q100 330 102 280 Q98 244 114 210 Z" fill="url(#ares-skin)" />
+                <path d="M128 210 Q142 250 148 300 Q154 350 160 396 L176 396 Q170 350 164 300 Q156 248 144 210 Z" fill="url(#ares-skin)" />
+                <path d="M72 395 L92 395 L101 403 Q84 409 68 403 Z" fill="url(#ares-skin)" />
+                <path d="M158 395 L178 395 L186 403 Q169 409 154 403 Z" fill="url(#ares-skin)" />
+                <path class="god-tunic" d="M84 112 Q120 96 156 112 L168 214 Q120 236 80 206 Z" fill="url(#ares-tunic)" />
+                <path d="M94 116 L110 116 L146 220 L130 220 Z" fill="url(#ares-iron)" opacity="0.85" />
+                <path d="M98 138 Q120 146 142 136" stroke="#5c1717" stroke-width="3" fill="none" opacity="0.5" />
+                <path d="M94 165 Q120 176 146 163" stroke="#5c1717" stroke-width="3" fill="none" opacity="0.5" />
+                <path d="M108 92 L132 92 L138 116 L102 116 Z" fill="url(#ares-skin)" />
+                <path d="M100 120 Q72 114 52 100 Q42 92 36 86 L44 76 Q52 88 64 98 Q80 110 108 126 Z" fill="url(#ares-skin)" />
+                <ellipse cx="38" cy="86" rx="9" ry="11" fill="url(#ares-skin)" />
+                <circle cx="38" cy="82" r="34" fill="url(#ares-iron)" stroke="#3a3a3a" stroke-width="4" />
+                <circle cx="38" cy="82" r="10" fill="#7a2222" />
+                <circle cx="26" cy="66" r="3" fill="#3a3a3a" /><circle cx="50" cy="66" r="3" fill="#3a3a3a" />
+                <circle cx="26" cy="98" r="3" fill="#3a3a3a" /><circle cx="50" cy="98" r="3" fill="#3a3a3a" />
+                <path d="M144 120 Q170 112 182 88 Q190 72 200 42 L188 38 Q180 66 172 84 Q162 100 136 126 Z" fill="url(#ares-skin)" />
+                <ellipse cx="199" cy="36" rx="9" ry="11" fill="url(#ares-skin)" />
+                <path d="M199 20 L172 134" stroke="url(#ares-iron)" stroke-width="6" stroke-linecap="round" />
+                <path d="M193 20 L199 2 L205 20 Z" fill="url(#ares-iron)" />
+                <path d="M86 46 Q80 20 120 16 Q160 20 154 46 Q156 62 146 76 Q150 50 136 42 Q132 24 120 22 Q108 24 104 42 Q90 50 94 76 Q84 62 86 46 Z" fill="url(#ares-hair)" />
+                <ellipse cx="94" cy="62" rx="5" ry="8" fill="url(#ares-skin)" />
+                <ellipse cx="146" cy="62" rx="5" ry="8" fill="url(#ares-skin)" />
+                <path d="M96 50 Q94 26 120 24 Q146 26 144 50 Q144 76 130 94 Q120 102 110 94 Q96 76 96 50 Z" fill="url(#ares-skin)" />
+                <path d="M100 52 L116 58" stroke="#241a12" stroke-width="3" stroke-linecap="round" />
+                <path d="M140 52 L124 58" stroke="#241a12" stroke-width="3" stroke-linecap="round" />
+                <path d="M100 62 Q108 58 116 62 Q108 66 100 62 Z" fill="#140a05" />
+                <path d="M124 62 Q132 58 140 62 Q132 66 124 62 Z" fill="#140a05" />
+                <path d="M120 62 L118 73 L122 73 Z" fill="#a5744a" />
+                <path d="M110 84 Q120 80 130 84" stroke="#3a1010" stroke-width="2.5" stroke-linecap="round" fill="none" />
+                <path d="M132 56 L138 66" stroke="#7a2222" stroke-width="1.5" opacity="0.6" />
+              </svg>
+              <h3 class="god-name">Ares <span class="roman">/ Mars</span></h3>
+              <p class="god-domain">War, and the brutal side of it.</p>
+              <p class="god-story" id="story-ares" hidden>
+                God of war in its rawest, bloodiest form, Ares delights in the chaos of battle
+                rather than the strategy behind it, which is why Athena regularly bests him.
+                Feared more than loved by the other Olympians, his affair with Aphrodite
+                produced children who would themselves come to embody love and strife.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
+      <!-- Realm 4: Earth & Harvest — Demeter, Dionysus -->
       <section class="realm" data-realm="4" aria-labelledby="realm-4-heading">
-        <h2 id="realm-4-heading" class="realm-heading">Light &amp; Wild</h2>
-        <div class="gods">
-          <article class="god" data-god="apollo" data-testid="god-card" tabindex="0" aria-expanded="false">
-            <svg class="god-icon" viewBox="0 0 64 64" role="img" aria-label="Apollo, a robed figure crowned with golden sun rays">
-              <circle cx="32" cy="14.4" r="6.4" fill="#e3ac7d" />
-              <path d="M22.4 57.6 L18.4 30.4 Q32 20 45.6 30.4 L41.6 57.6 Z" fill="#c9a13b" />
-              <path d="M24 19 Q32 6 40 19 Q40 12 32 10 Q24 12 24 19 Z" fill="#e8c468" />
-              <path d="M20.8 11.2 L24 3.2 L27.2 11.2 Z M28 8 L32 0 L36 8 Z M36.8 11.2 L40 3.2 L43.2 11.2 Z" fill="#f2c94c" />
-            </svg>
-            <h3 class="god-name">Apollo <span class="roman">/ Apollo</span></h3>
-            <p class="god-domain">Sun, music, and prophecy.</p>
-            <p class="god-story" id="story-apollo" hidden>
-              God of the sun, music, poetry, and prophecy, Apollo speaks through the oracle
-              at Delphi, which he claimed by slaying the serpent Python. Twin brother to
-              Artemis, he is the ideal of youthful beauty and reason among the Olympians, as
-              comfortable with a lyre as with a bow.
-            </p>
-          </article>
-          <article class="god" data-god="artemis" data-testid="god-card" tabindex="0" aria-expanded="false">
-            <svg class="god-icon" viewBox="0 0 64 64" role="img" aria-label="Artemis, a robed figure holding a silver bow beneath a crescent moon">
-              <circle cx="32" cy="14.4" r="6.4" fill="#e3ac7d" />
-              <path d="M22.4 57.6 L18.4 30.4 Q32 20 45.6 30.4 L41.6 57.6 Z" fill="#2f5b3f" />
-              <path d="M24 19 Q32 4 40 19 Q40 12 32 10 Q24 12 24 19 Z" fill="#cfd6da" />
-              <circle cx="46" cy="9" r="5" fill="#cfd6da" />
-              <circle cx="48.5" cy="6.5" r="4" fill="#0e0b18" />
-              <path d="M14.4 25.6 Q6.4 38.4 14.4 51.2 Q10.4 38.4 14.4 25.6 Z" fill="#cfd6da" />
-            </svg>
-            <h3 class="god-name">Artemis <span class="roman">/ Diana</span></h3>
-            <p class="god-domain">The hunt, the moon, and the wilderness.</p>
-            <p class="god-story" id="story-artemis" hidden>
-              Goddess of the hunt, the moon, and the wilderness, Artemis was born first and
-              helped deliver her twin brother Apollo. Fiercely protective of her chastity and
-              her wild places, she turned the hunter Actaeon into a stag for glimpsing her
-              bathing, and roams the forests with a retinue of nymphs.
-            </p>
-          </article>
+        <div class="realm-bg" aria-hidden="true">
+          <svg class="realm-art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+            <circle class="parallax parallax-slow" cx="1300" cy="160" r="120" fill="#ffe9a8" opacity="0.5" />
+            <g class="parallax parallax-fast" stroke="#c99a3a" stroke-width="6" opacity="0.55">
+              <line x1="0" y1="700" x2="0" y2="640" /><line x1="40" y1="700" x2="30" y2="630" />
+              <line x1="80" y1="700" x2="90" y2="635" /><line x1="120" y1="700" x2="110" y2="625" />
+              <line x1="160" y1="700" x2="170" y2="640" /><line x1="200" y1="700" x2="195" y2="630" />
+              <line x1="1400" y1="700" x2="1400" y2="640" /><line x1="1440" y1="700" x2="1430" y2="630" />
+              <line x1="1480" y1="700" x2="1490" y2="635" /><line x1="1520" y1="700" x2="1510" y2="625" />
+            </g>
+          </svg>
+          <span class="particle particle-pollen" style="--x: 15%; --delay: 0s; --dur: 18s"></span>
+          <span class="particle particle-pollen" style="--x: 35%; --delay: 5s; --dur: 20s"></span>
+          <span class="particle particle-pollen" style="--x: 60%; --delay: 2s; --dur: 16s"></span>
+          <span class="particle particle-pollen" style="--x: 82%; --delay: 7s; --dur: 22s"></span>
+        </div>
+        <div class="realm-content">
+          <h2 id="realm-4-heading" class="realm-heading">Earth &amp; Harvest</h2>
+          <div class="realm-gods">
+            <article class="god-figure" data-god="demeter" data-testid="god-card" tabindex="0" aria-expanded="false">
+              <svg class="god-art" viewBox="0 0 240 480" role="img" aria-label="Demeter, warm-faced with a wheat-woven crown, cradling a golden sheaf of wheat across her chest">
+                <defs>
+                  <linearGradient id="demeter-skin" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#f0c79a" /><stop offset="1" stop-color="#c98a52" />
+                  </linearGradient>
+                  <linearGradient id="demeter-gown" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#a9702f" /><stop offset="1" stop-color="#5c3210" />
+                  </linearGradient>
+                  <linearGradient id="demeter-wheat" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#e6b94a" /><stop offset="1" stop-color="#a9762a" />
+                  </linearGradient>
+                  <linearGradient id="demeter-hair" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#6b4a30" /><stop offset="1" stop-color="#3a2515" />
+                  </linearGradient>
+                </defs>
+                <ellipse class="god-shadow" cx="120" cy="460" rx="75" ry="14" />
+                <path d="M92 396 L112 396 L120 404 Q100 410 84 404 Z" fill="url(#demeter-skin)" />
+                <path class="god-tunic" d="M86 116 Q120 102 154 116 L172 400 Q120 434 78 392 Z" fill="url(#demeter-gown)" />
+                <path d="M96 120 L112 120 L118 210 L102 210 Z" fill="url(#demeter-wheat)" opacity="0.9" />
+                <path d="M92 200 Q88 300 84 390" stroke="#5c3210" stroke-width="3" fill="none" opacity="0.4" />
+                <path d="M150 200 Q156 300 162 388" stroke="#5c3210" stroke-width="3" fill="none" opacity="0.4" />
+                <path d="M120 210 L118 396" stroke="#5c3210" stroke-width="2" fill="none" opacity="0.3" />
+                <path d="M108 92 L132 92 L138 116 L102 116 Z" fill="url(#demeter-skin)" />
+                <path d="M84 120 Q64 130 68 152 Q70 162 90 172 L98 162 Q82 154 80 148 Q78 136 96 124 Z" fill="url(#demeter-skin)" />
+                <ellipse cx="100" cy="168" rx="8" ry="10" fill="url(#demeter-skin)" />
+                <path d="M156 120 Q176 130 172 152 Q170 162 150 172 L142 162 Q158 154 160 148 Q162 136 144 124 Z" fill="url(#demeter-skin)" />
+                <ellipse cx="140" cy="168" rx="8" ry="10" fill="url(#demeter-skin)" />
+                <path d="M104 210 L92 138 L104 162 L110 132 L116 162 L122 126 L128 162 L134 132 L140 168 Z" fill="url(#demeter-wheat)" />
+                <ellipse cx="118" cy="172" rx="20" ry="6" fill="#5c3210" opacity="0.7" />
+                <path d="M80 46 Q72 18 120 14 Q168 18 160 46 Q164 70 150 86 Q154 56 138 45 Q134 24 120 22 Q106 24 102 45 Q86 56 90 86 Q76 70 80 46 Z" fill="url(#demeter-hair)" />
+                <ellipse cx="94" cy="62" rx="5" ry="8" fill="url(#demeter-skin)" />
+                <ellipse cx="146" cy="62" rx="5" ry="8" fill="url(#demeter-skin)" />
+                <path d="M96 50 Q94 26 120 24 Q146 26 144 50 Q144 76 130 94 Q120 102 110 94 Q96 76 96 50 Z" fill="url(#demeter-skin)" />
+                <path d="M84 30 L90 18 L96 30 Z M100 24 L106 12 L112 24 Z M128 24 L134 12 L140 24 Z M144 30 L150 18 L156 30 Z" fill="url(#demeter-wheat)" />
+                <path d="M103 55 Q108 53 114 55" stroke="#5c3a1a" stroke-width="3" stroke-linecap="round" fill="none" />
+                <path d="M126 55 Q132 53 137 55" stroke="#5c3a1a" stroke-width="3" stroke-linecap="round" fill="none" />
+                <path d="M101 60 Q108 55 115 60 Q108 65 101 60 Z" fill="#3a2515" />
+                <path d="M125 60 Q132 55 139 60 Q132 65 125 60 Z" fill="#3a2515" />
+                <path d="M120 62 L118 73 L122 73 Z" fill="#b8875a" />
+                <path d="M110 83 Q120 89 130 83" stroke="#8a5a3a" stroke-width="2.5" stroke-linecap="round" fill="none" />
+              </svg>
+              <h3 class="god-name">Demeter <span class="roman">/ Ceres</span></h3>
+              <p class="god-domain">Harvest, agriculture, and the growing seasons.</p>
+              <p class="god-story" id="story-demeter" hidden>
+                Goddess of the harvest and the grain, Demeter's grief for her daughter
+                Persephone, taken by Hades to the underworld, once left the earth barren through
+                winter. Her joy at Persephone's yearly return brings spring, tying the growing
+                seasons directly to a mother's love.
+              </p>
+            </article>
+            <article class="god-figure" data-god="dionysus" data-testid="god-card" tabindex="0" aria-expanded="false">
+              <svg class="god-art" viewBox="0 0 240 480" role="img" aria-label="Dionysus, curly-haired and ivy-crowned, raising a bunch of grapes to a sly grin, kantharos cup in his other hand">
+                <defs>
+                  <linearGradient id="dionysus-skin" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#e6bb85" /><stop offset="1" stop-color="#b8814f" />
+                  </linearGradient>
+                  <linearGradient id="dionysus-tunic" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#6b4a94" /><stop offset="1" stop-color="#2e1a4a" />
+                  </linearGradient>
+                  <linearGradient id="dionysus-grape" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#8a5ac0" /><stop offset="1" stop-color="#4a2470" />
+                  </linearGradient>
+                  <linearGradient id="dionysus-hair" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#4a3020" /><stop offset="1" stop-color="#2a1810" />
+                  </linearGradient>
+                </defs>
+                <ellipse class="god-shadow" cx="120" cy="460" rx="75" ry="14" />
+                <path d="M94 210 Q90 258 92 300 Q88 350 86 396 L100 396 Q106 350 108 300 Q102 258 116 210 Z" fill="url(#dionysus-skin)" />
+                <path d="M122 210 Q128 255 126 296 Q130 345 134 394 L148 393 Q146 344 142 296 Q140 253 146 210 Z" fill="url(#dionysus-skin)" />
+                <path d="M84 395 L102 395 L111 402 Q94 408 80 402 Z" fill="url(#dionysus-skin)" />
+                <path d="M132 393 L150 393 L157 400 Q142 405 128 400 Z" fill="url(#dionysus-skin)" />
+                <path class="god-tunic" d="M88 116 Q120 106 152 116 L160 214 Q120 232 84 208 Z" fill="url(#dionysus-tunic)" />
+                <path d="M150 118 L162 122 L140 216 L128 212 Z" fill="url(#dionysus-grape)" opacity="0.85" />
+                <path d="M96 145 Q120 152 140 143" stroke="#2e1a4a" stroke-width="3" fill="none" opacity="0.5" />
+                <path d="M92 172 Q120 182 144 170" stroke="#2e1a4a" stroke-width="3" fill="none" opacity="0.5" />
+                <path d="M108 92 L132 92 L138 116 L102 116 Z" fill="url(#dionysus-skin)" />
+                <path d="M142 118 Q164 112 174 90 Q178 78 168 62 L156 68 Q164 80 158 92 Q150 104 128 124 Z" fill="url(#dionysus-skin)" />
+                <ellipse cx="150" cy="64" rx="8" ry="10" fill="url(#dionysus-skin)" />
+                <circle cx="140" cy="50" r="9" fill="url(#dionysus-grape)" /><circle cx="154" cy="46" r="9" fill="url(#dionysus-grape)" />
+                <circle cx="147" cy="60" r="9" fill="url(#dionysus-grape)" /><circle cx="161" cy="56" r="9" fill="url(#dionysus-grape)" />
+                <circle cx="150" cy="72" r="9" fill="url(#dionysus-grape)" />
+                <path d="M130 40 Q118 28 128 18 Q142 24 138 38 Z" fill="#4a7a3a" />
+                <path d="M84 118 Q62 126 58 150 Q54 168 60 184 L72 180 Q66 166 70 150 Q74 136 94 122 Z" fill="url(#dionysus-skin)" />
+                <ellipse cx="66" cy="186" rx="8" ry="10" fill="url(#dionysus-skin)" />
+                <path d="M52 190 L52 202 Q62 210 74 202 L74 190 Z M46 192 Q40 196 46 200 Z M80 192 Q86 196 80 200 Z" fill="url(#dionysus-grape)" />
+                <path d="M82 48 Q76 20 120 16 Q164 20 158 48 Q162 68 150 82 Q154 55 138 44 Q134 24 120 22 Q106 24 102 44 Q86 55 90 82 Q78 68 82 48 Z" fill="url(#dionysus-hair)" />
+                <circle cx="88" cy="34" r="8" fill="url(#dionysus-hair)" /><circle cx="102" cy="22" r="8" fill="url(#dionysus-hair)" />
+                <circle cx="120" cy="18" r="8" fill="url(#dionysus-hair)" /><circle cx="138" cy="22" r="8" fill="url(#dionysus-hair)" />
+                <circle cx="152" cy="34" r="8" fill="url(#dionysus-hair)" />
+                <path d="M86 30 Q80 20 90 14 Q100 22 94 32 Z M116 18 Q110 8 120 4 Q128 12 122 22 Z M148 30 Q142 20 152 16 Q160 24 154 34 Z" fill="#3f6b34" />
+                <ellipse cx="94" cy="62" rx="5" ry="8" fill="url(#dionysus-skin)" />
+                <ellipse cx="146" cy="62" rx="5" ry="8" fill="url(#dionysus-skin)" />
+                <path d="M96 50 Q94 26 120 24 Q146 26 144 50 Q144 76 130 94 Q120 102 110 94 Q96 76 96 50 Z" fill="url(#dionysus-skin)" />
+                <path d="M103 55 L114 54" stroke="#4a3020" stroke-width="3" stroke-linecap="round" />
+                <path d="M126 54 L137 55" stroke="#4a3020" stroke-width="3" stroke-linecap="round" />
+                <path d="M101 61 Q108 58 115 61 Q108 63 101 61 Z" fill="#2a1810" />
+                <path d="M125 61 Q132 58 139 61 Q132 63 125 61 Z" fill="#2a1810" />
+                <path d="M120 62 L118 73 L122 73 Z" fill="#b8875a" />
+                <path d="M109 82 Q120 88 132 81" stroke="#7a4a2a" stroke-width="2.5" stroke-linecap="round" fill="none" />
+              </svg>
+              <h3 class="god-name">Dionysus <span class="roman">/ Bacchus</span></h3>
+              <p class="god-domain">Wine, festivity, and ecstatic release.</p>
+              <p class="god-story" id="story-dionysus" hidden>
+                God of wine, festivity, and ecstatic release, Dionysus was born mortal and
+                reborn divine after Zeus rescued him from his dying mother Semele. His
+                followers, the maenads, could be driven to frenzy in his name, and his rites
+                promised transformation — for better or worse — to anyone who joined them.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
+      <!-- Realm 5: Underground Fire — Hephaestus (solo) -->
       <section class="realm" data-realm="5" aria-labelledby="realm-5-heading">
-        <h2 id="realm-5-heading" class="realm-heading">Roads &amp; Revelry</h2>
-        <div class="gods">
-          <article class="god" data-god="hermes" data-testid="god-card" tabindex="0" aria-expanded="false">
-            <svg class="god-icon" viewBox="0 0 64 64" role="img" aria-label="Hermes, a robed figure with a winged helmet and winged sandals">
-              <circle cx="32" cy="14.4" r="6.4" fill="#d9a978" />
-              <path d="M22.4 57.6 L18.4 30.4 Q32 20 45.6 30.4 L41.6 57.6 Z" fill="#a8552b" />
-              <path d="M21 20 Q32 5 43 20 L43 24 Q32 18 21 24 Z" fill="#c7ced1" />
-              <path d="M20.8 9.6 Q11.2 6.4 12.8 14.4 Q19.2 14.4 24 11.2 Z M43.2 9.6 Q52.8 6.4 51.2 14.4 Q44.8 14.4 40 11.2 Z" fill="#c7ced1" />
-              <path d="M19.2 54.4 Q9.6 51.2 12.8 46.4 Q19.2 49.6 22.4 56 Z M44.8 54.4 Q54.4 51.2 51.2 46.4 Q44.8 49.6 41.6 56 Z" fill="#c7ced1" />
-            </svg>
-            <h3 class="god-name">Hermes <span class="roman">/ Mercury</span></h3>
-            <p class="god-domain">Messenger of the gods; travel and trade.</p>
-            <p class="god-story" id="story-hermes" hidden>
-              Messenger of the gods and guide of travellers, Hermes moves between Olympus,
-              earth, and the underworld on winged sandals. Clever from birth — he stole
-              Apollo's cattle as an infant and invented the lyre from a tortoise shell to make
-              amends — he is also the god of thieves, merchants, and boundaries.
-            </p>
-          </article>
-          <article class="god" data-god="dionysus" data-testid="god-card" tabindex="0" aria-expanded="false">
-            <svg class="god-icon" viewBox="0 0 64 64" role="img" aria-label="Dionysus, a robed figure holding grapes with an ivy-leaf crown">
-              <circle cx="32" cy="14.4" r="6.4" fill="#d9a978" />
-              <path d="M22.4 57.6 L18.4 30.4 Q32 20 45.6 30.4 L41.6 57.6 Z" fill="#4a2f66" />
-              <path d="M24 19 Q32 6 40 19 Q40 12 32 10 Q24 12 24 19 Z" fill="#241a12" />
-              <path d="M22.4 8 Q27.2 3.2 32 8 Q27.2 6.4 22.4 8 Z" fill="#3f6b34" />
-              <circle cx="46.4" cy="16" r="3.2" fill="#6b3fa0" />
-              <circle cx="51.2" cy="14.4" r="3.2" fill="#6b3fa0" />
-              <circle cx="48.8" cy="20.8" r="3.2" fill="#6b3fa0" />
-              <circle cx="53.6" cy="20.8" r="3.2" fill="#6b3fa0" />
-              <circle cx="49.6" cy="25.6" r="3.2" fill="#6b3fa0" />
-            </svg>
-            <h3 class="god-name">Dionysus <span class="roman">/ Bacchus</span></h3>
-            <p class="god-domain">Wine, festivity, and ecstatic release.</p>
-            <p class="god-story" id="story-dionysus" hidden>
-              God of wine, festivity, and ecstatic release, Dionysus was born mortal and
-              reborn divine after Zeus rescued him from his dying mother Semele. His
-              followers, the maenads, could be driven to frenzy in his name, and his rites
-              promised transformation — for better or worse — to anyone who joined them.
-            </p>
-          </article>
+        <div class="realm-bg" aria-hidden="true">
+          <svg class="realm-art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+            <path class="parallax parallax-mid" d="M0 300 L200 260 L380 320 L560 250 L760 310 L960 240 L1160 300 L1360 250 L1600 300 L1600 0 L0 0 Z" fill="#1a0f0a" opacity="0.85" />
+            <g class="parallax parallax-fast" stroke="#ff9a3c" stroke-width="5" fill="none" opacity="0.7">
+              <path d="M100 700 L160 660 L140 620 L220 580" />
+              <path d="M900 750 L960 700 L930 660 L1010 610" />
+              <path d="M1300 720 L1360 680 L1330 640 L1400 600" />
+            </g>
+          </svg>
+          <span class="particle particle-ember" style="--x: 18%; --delay: 0s; --dur: 7s"></span>
+          <span class="particle particle-ember" style="--x: 42%; --delay: 2s; --dur: 8s"></span>
+          <span class="particle particle-ember" style="--x: 63%; --delay: 4s; --dur: 6.5s"></span>
+          <span class="particle particle-ember" style="--x: 80%; --delay: 1s; --dur: 7.5s"></span>
+        </div>
+        <div class="realm-content">
+          <h2 id="realm-5-heading" class="realm-heading">Underground Fire</h2>
+          <div class="realm-gods realm-gods-solo">
+            <article class="god-figure" data-god="hephaestus" data-testid="god-card" tabindex="0" aria-expanded="false">
+              <svg class="god-art" viewBox="0 0 240 480" role="img" aria-label="Hephaestus, rugged and bearded in a leather apron, swinging an iron hammer overhead with tongs gripped in his other hand">
+                <defs>
+                  <linearGradient id="hephaestus-skin" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#dc9f68" /><stop offset="1" stop-color="#a86838" />
+                  </linearGradient>
+                  <linearGradient id="hephaestus-tunic" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#7a5230" /><stop offset="1" stop-color="#3a230f" />
+                  </linearGradient>
+                  <linearGradient id="hephaestus-sash" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#4a3018" /><stop offset="1" stop-color="#2a1a0c" />
+                  </linearGradient>
+                  <linearGradient id="hephaestus-hammer" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#9d9d9d" /><stop offset="1" stop-color="#5c5c5c" />
+                  </linearGradient>
+                  <linearGradient id="hephaestus-hair" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#3a2515" /><stop offset="1" stop-color="#1c1208" />
+                  </linearGradient>
+                </defs>
+                <ellipse class="god-shadow" cx="120" cy="460" rx="75" ry="14" />
+                <path d="M88 210 Q80 258 84 300 Q78 350 74 396 L92 396 Q100 350 104 300 Q96 258 114 210 Z" fill="url(#hephaestus-skin)" />
+                <path d="M126 210 Q136 258 140 300 Q146 350 150 396 L168 396 Q162 350 156 300 Q152 258 152 210 Z" fill="url(#hephaestus-skin)" />
+                <path d="M72 395 L94 395 L104 403 Q84 409 66 403 Z" fill="url(#hephaestus-skin)" />
+                <path d="M150 395 L172 395 L182 403 Q162 409 144 403 Z" fill="url(#hephaestus-skin)" />
+                <path class="god-tunic" d="M82 108 Q120 92 158 108 L170 214 Q120 238 78 208 Z" fill="url(#hephaestus-tunic)" />
+                <path d="M92 130 L148 130 L156 214 Q120 232 92 208 Z" fill="url(#hephaestus-sash)" opacity="0.92" />
+                <path d="M96 116 L100 132" stroke="url(#hephaestus-sash)" stroke-width="4" />
+                <path d="M144 116 L140 132" stroke="url(#hephaestus-sash)" stroke-width="4" />
+                <path d="M96 168 L144 168" stroke="#2a1a0c" stroke-width="3" opacity="0.6" />
+                <path d="M104 92 L136 92 L142 118 L98 118 Z" fill="url(#hephaestus-skin)" />
+                <path d="M144 116 Q170 108 182 82 Q188 66 196 40 L182 34 Q176 62 168 78 Q158 96 132 122 Z" fill="url(#hephaestus-skin)" />
+                <ellipse cx="194" cy="36" rx="10" ry="12" fill="url(#hephaestus-skin)" />
+                <path d="M184 26 Q178 22 177 30 Q184 34 189 30 Z M186 33 Q180 33 180 41 Q186 44 190 39 Z" fill="url(#hephaestus-skin)" />
+                <path d="M194 14 L194 76" stroke="url(#hephaestus-sash)" stroke-width="8" />
+                <path d="M172 0 L216 0 L216 26 L172 26 Z" fill="url(#hephaestus-hammer)" />
+                <path d="M96 116 Q70 122 58 144 Q50 158 46 170 L58 176 Q64 158 72 146 Q82 132 104 122 Z" fill="url(#hephaestus-skin)" />
+                <ellipse cx="50" cy="172" rx="9" ry="11" fill="url(#hephaestus-skin)" />
+                <path d="M38 160 L50 172 L38 190 M62 160 L50 172 L62 190" stroke="url(#hephaestus-hammer)" stroke-width="4" fill="none" stroke-linecap="round" />
+                <path d="M84 46 Q76 18 120 14 Q164 18 156 46 Q160 66 148 80 Q152 52 138 43 Q134 23 120 21 Q106 23 102 43 Q88 52 92 80 Q80 66 84 46 Z" fill="url(#hephaestus-hair)" />
+                <ellipse cx="94" cy="62" rx="5" ry="8" fill="url(#hephaestus-skin)" />
+                <ellipse cx="146" cy="62" rx="5" ry="8" fill="url(#hephaestus-skin)" />
+                <path d="M96 50 Q94 26 120 24 Q146 26 144 50 Q144 76 130 94 Q120 102 110 94 Q96 76 96 50 Z" fill="url(#hephaestus-skin)" />
+                <path d="M101 54 L115 51" stroke="#1c1208" stroke-width="3" stroke-linecap="round" />
+                <path d="M125 51 L139 54" stroke="#1c1208" stroke-width="3" stroke-linecap="round" />
+                <path d="M101 60 Q108 55 115 60 Q108 65 101 60 Z" fill="#1c1208" />
+                <path d="M125 60 Q132 55 139 60 Q132 65 125 60 Z" fill="#1c1208" />
+                <path d="M120 62 L118 73 L122 73 Z" fill="#8a5a34" />
+                <path d="M96 68 Q88 100 98 132 Q110 148 120 148 Q130 148 142 132 Q152 100 144 68 Q134 84 120 84 Q106 84 96 68 Z" fill="url(#hephaestus-hair)" />
+              </svg>
+              <h3 class="god-name">Hephaestus <span class="roman">/ Vulcan</span></h3>
+              <p class="god-domain">Fire, the forge, and craftsmanship.</p>
+              <p class="god-story" id="story-hephaestus" hidden>
+                Lame from birth and thrown from Olympus by an ashamed Hera, Hephaestus became
+                the gods' master smith anyway, forging Zeus's thunderbolts, Achilles' armour,
+                and automatons of gold. Married to Aphrodite, he built his forge beneath
+                volcanoes, where the Cyclopes worked his bellows.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Realm 6: The Sea — Poseidon, Aphrodite -->
+      <section class="realm" data-realm="6" aria-labelledby="realm-6-heading">
+        <div class="realm-bg" aria-hidden="true">
+          <svg class="realm-art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+            <g class="parallax parallax-slow" fill="#eaf6ff" opacity="0.15">
+              <polygon points="200,0 320,0 260,900 140,900" />
+              <polygon points="900,0 1040,0 980,900 860,900" />
+            </g>
+            <g class="parallax parallax-mid" stroke="#bfe6f5" stroke-width="8" fill="none" opacity="0.4">
+              <path d="M0 500 Q200 460 400 500 T800 500 T1200 500 T1600 500" />
+              <path d="M0 600 Q200 560 400 600 T800 600 T1200 600 T1600 600" />
+            </g>
+          </svg>
+          <span class="particle particle-bubble" style="--x: 10%; --delay: 0s; --dur: 10s"></span>
+          <span class="particle particle-bubble" style="--x: 30%; --delay: 2s; --dur: 12s"></span>
+          <span class="particle particle-bubble" style="--x: 55%; --delay: 4s; --dur: 9s"></span>
+          <span class="particle particle-bubble" style="--x: 75%; --delay: 1s; --dur: 11s"></span>
+          <span class="particle particle-bubble" style="--x: 90%; --delay: 6s; --dur: 10.5s"></span>
+        </div>
+        <div class="realm-content">
+          <h2 id="realm-6-heading" class="realm-heading">The Sea</h2>
+          <div class="realm-gods">
+            <article class="god-figure" data-god="poseidon" data-testid="god-card" tabindex="0" aria-expanded="false">
+              <svg class="god-art" viewBox="0 0 240 480" role="img" aria-label="Poseidon, sea-grey hair and beard flowing, thrusting a bronze trident forward">
+                <defs>
+                  <linearGradient id="poseidon-skin" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#e6bb85" /><stop offset="1" stop-color="#b8814f" />
+                  </linearGradient>
+                  <linearGradient id="poseidon-tunic" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#2a8fc4" /><stop offset="1" stop-color="#0f3f5c" />
+                  </linearGradient>
+                  <linearGradient id="poseidon-trident" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#e8c97a" /><stop offset="1" stop-color="#a9762a" />
+                  </linearGradient>
+                  <linearGradient id="poseidon-hair" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#5a6b78" /><stop offset="1" stop-color="#2a3844" />
+                  </linearGradient>
+                </defs>
+                <ellipse class="god-shadow" cx="120" cy="460" rx="75" ry="14" />
+                <path d="M90 208 Q84 258 86 300 Q82 350 78 396 L94 396 Q102 350 104 300 Q98 258 116 208 Z" fill="url(#poseidon-skin)" />
+                <path d="M124 208 Q132 258 134 300 Q136 350 138 396 L154 396 Q150 350 148 300 Q146 258 148 208 Z" fill="url(#poseidon-skin)" />
+                <path d="M76 395 L96 395 L106 403 Q88 409 72 403 Z" fill="url(#poseidon-skin)" />
+                <path d="M136 395 L156 395 L165 403 Q148 409 132 403 Z" fill="url(#poseidon-skin)" />
+                <path class="god-tunic" d="M86 112 Q120 98 154 112 L166 218 Q120 240 82 210 Z" fill="url(#poseidon-tunic)" />
+                <path d="M96 116 L112 116 L142 220 L126 220 Z" fill="url(#poseidon-trident)" opacity="0.8" />
+                <path d="M98 140 Q120 148 140 138" stroke="#0f3f5c" stroke-width="3" fill="none" opacity="0.5" />
+                <path d="M94 168 Q120 178 142 165" stroke="#0f3f5c" stroke-width="3" fill="none" opacity="0.5" />
+                <path d="M148 108 Q160 96 168 108 Q160 116 148 108 Z" fill="url(#poseidon-trident)" opacity="0.8" />
+                <path d="M108 92 L132 92 L138 116 L102 116 Z" fill="url(#poseidon-skin)" />
+                <path d="M142 116 Q168 118 182 128 Q194 136 204 112 L192 104 Q184 122 172 116 Q158 110 130 122 Z" fill="url(#poseidon-skin)" />
+                <ellipse cx="202" cy="108" rx="9" ry="11" fill="url(#poseidon-skin)" />
+                <path d="M204 100 L100 220" stroke="url(#poseidon-trident)" stroke-width="7" stroke-linecap="round" />
+                <path d="M190 90 L196 62 L204 92 Z M202 88 L212 58 L218 90 Z M178 96 L182 66 L192 96 Z" fill="url(#poseidon-trident)" />
+                <path d="M98 116 Q72 122 60 144 Q52 158 48 170 L60 176 Q66 158 74 146 Q84 132 106 122 Z" fill="url(#poseidon-skin)" />
+                <ellipse cx="52" cy="172" rx="8" ry="10" fill="url(#poseidon-skin)" />
+                <path d="M78 46 Q68 14 120 10 Q172 14 162 46 Q168 76 178 106 Q160 74 144 48 Q140 22 120 20 Q100 22 96 48 Q80 74 62 106 Q72 76 78 46 Z" fill="url(#poseidon-hair)" />
+                <ellipse cx="94" cy="62" rx="5" ry="8" fill="url(#poseidon-skin)" />
+                <ellipse cx="146" cy="62" rx="5" ry="8" fill="url(#poseidon-skin)" />
+                <path d="M96 50 Q94 26 120 24 Q146 26 144 50 Q144 76 130 94 Q120 102 110 94 Q96 76 96 50 Z" fill="url(#poseidon-skin)" />
+                <path d="M102 54 L114 51" stroke="#2a3844" stroke-width="3" stroke-linecap="round" />
+                <path d="M126 51 L138 54" stroke="#2a3844" stroke-width="3" stroke-linecap="round" />
+                <path d="M101 60 Q108 55 115 60 Q108 65 101 60 Z" fill="#1c252c" />
+                <path d="M125 60 Q132 55 139 60 Q132 65 125 60 Z" fill="#1c252c" />
+                <path d="M120 62 L118 73 L122 73 Z" fill="#8a5a34" />
+                <path d="M98 66 Q90 100 98 130 Q108 145 120 145 Q132 145 142 130 Q150 100 142 66 Q132 82 120 82 Q108 82 98 66 Z" fill="url(#poseidon-hair)" />
+              </svg>
+              <h3 class="god-name">Poseidon <span class="roman">/ Neptune</span></h3>
+              <p class="god-domain">The sea, earthquakes, and horses.</p>
+              <p class="god-story" id="story-poseidon" hidden>
+                Brother to Zeus and ruler of the seas, Poseidon can calm the waves or summon
+                storms and earthquakes with a strike of his trident. He contested Athens with
+                Athena and lost, but fathered the winged horse Pegasus and countless sea
+                creatures, and sailors prayed to him before every voyage.
+              </p>
+            </article>
+            <article class="god-figure" data-god="aphrodite" data-testid="god-card" tabindex="0" aria-expanded="false">
+              <svg class="god-art" viewBox="0 0 240 480" role="img" aria-label="Aphrodite, golden hair flowing past her shoulders, in a flowing gown to the floor, raising a shell mirror to her face">
+                <defs>
+                  <linearGradient id="aphrodite-skin" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#f0d0a8" /><stop offset="1" stop-color="#c99a68" />
+                  </linearGradient>
+                  <linearGradient id="aphrodite-dress" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#e08cae" /><stop offset="1" stop-color="#8a3860" />
+                  </linearGradient>
+                  <linearGradient id="aphrodite-shell" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#fbe8d4" /><stop offset="1" stop-color="#e8c39a" />
+                  </linearGradient>
+                  <linearGradient id="aphrodite-hair" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#e8c468" /><stop offset="1" stop-color="#b8934a" />
+                  </linearGradient>
+                </defs>
+                <ellipse class="god-shadow" cx="120" cy="460" rx="75" ry="14" />
+                <path d="M100 404 L118 404 L126 411 Q108 417 92 411 Z" fill="url(#aphrodite-skin)" />
+                <path class="god-tunic" d="M88 112 Q120 98 152 112 L148 220 Q152 320 146 404 L96 404 Q88 320 92 220 Z" fill="url(#aphrodite-dress)" />
+                <path d="M98 118 L112 118 L104 250 L90 244 Z" fill="url(#aphrodite-shell)" opacity="0.7" />
+                <path d="M96 240 Q90 330 96 400" stroke="#8a3860" stroke-width="3" fill="none" opacity="0.4" />
+                <path d="M144 240 Q150 330 142 400" stroke="#8a3860" stroke-width="3" fill="none" opacity="0.4" />
+                <path d="M108 92 L132 92 L138 116 L102 116 Z" fill="url(#aphrodite-skin)" />
+                <path d="M140 112 Q162 106 172 86 Q178 72 170 50 L158 54 Q164 72 158 84 Q150 98 128 118 Z" fill="url(#aphrodite-skin)" />
+                <ellipse cx="168" cy="52" rx="8" ry="9" fill="url(#aphrodite-skin)" />
+                <path d="M144 48 Q168 6 192 48 Q174 30 168 36 Q162 30 144 48 Z" fill="url(#aphrodite-shell)" />
+                <path d="M100 112 Q78 118 70 138 Q64 152 74 166 L84 158 Q76 148 80 138 Q84 126 108 116 Z" fill="url(#aphrodite-skin)" />
+                <ellipse cx="80" cy="166" rx="8" ry="9" fill="url(#aphrodite-skin)" />
+                <path d="M90 90 Q76 130 84 168" stroke="url(#aphrodite-hair)" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.9" />
+                <path d="M150 90 Q164 130 156 168" stroke="url(#aphrodite-hair)" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.9" />
+                <path d="M80 46 Q70 14 120 10 Q170 14 160 46 Q166 80 176 118 Q156 82 142 50 Q138 22 120 20 Q102 22 98 50 Q84 82 64 118 Q74 80 80 46 Z" fill="url(#aphrodite-hair)" />
+                <ellipse cx="94" cy="62" rx="5" ry="8" fill="url(#aphrodite-skin)" />
+                <ellipse cx="146" cy="62" rx="5" ry="8" fill="url(#aphrodite-skin)" />
+                <path d="M96 50 Q94 26 120 24 Q146 26 144 50 Q144 76 130 94 Q120 102 110 94 Q96 76 96 50 Z" fill="url(#aphrodite-skin)" />
+                <path d="M104 54 Q109 51 115 54" stroke="#8a6a3a" stroke-width="2.5" stroke-linecap="round" fill="none" />
+                <path d="M125 54 Q131 51 136 54" stroke="#8a6a3a" stroke-width="2.5" stroke-linecap="round" fill="none" />
+                <path d="M101 60 Q108 55 115 60 Q108 65 101 60 Z" fill="#5c3a24" />
+                <path d="M125 60 Q132 55 139 60 Q132 65 125 60 Z" fill="#5c3a24" />
+                <path d="M120 62 L118 73 L122 73 Z" fill="#c99a68" />
+                <path d="M111 82 Q120 87 129 82" stroke="#8a3860" stroke-width="2.2" stroke-linecap="round" fill="none" />
+              </svg>
+              <h3 class="god-name">Aphrodite <span class="roman">/ Venus</span></h3>
+              <p class="god-domain">Love, beauty, and desire.</p>
+              <p class="god-story" id="story-aphrodite" hidden>
+                Goddess of love, beauty, and desire, Aphrodite was born from sea-foam off
+                Cyprus. Married to Hephaestus but drawn to Ares, her golden apple to Paris in
+                the judgment of the goddesses set off the chain of events that led to the
+                Trojan War.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Realm 7: Deep Sea — atmospheric transition, no god -->
+      <section class="realm realm-transition" data-realm="7" aria-labelledby="realm-7-heading">
+        <div class="realm-bg" aria-hidden="true">
+          <svg class="realm-art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+            <g class="parallax parallax-slow" fill="#7fb8d0" opacity="0.12">
+              <circle cx="300" cy="200" r="200" />
+              <circle cx="1200" cy="500" r="260" />
+            </g>
+          </svg>
+          <span class="particle particle-bubble particle-bubble-dim" style="--x: 20%; --delay: 0s; --dur: 14s"></span>
+          <span class="particle particle-bubble particle-bubble-dim" style="--x: 50%; --delay: 5s; --dur: 16s"></span>
+          <span class="particle particle-bubble particle-bubble-dim" style="--x: 78%; --delay: 2s; --dur: 15s"></span>
+        </div>
+        <div class="realm-content">
+          <h2 id="realm-7-heading" class="realm-heading">Deep Sea</h2>
+          <p class="realm-caption">The light fades. Somewhere below, the dead are waiting.</p>
+        </div>
+      </section>
+
+      <!-- Realm 8: The Underworld — Hades (solo) -->
+      <section class="realm" data-realm="8" aria-labelledby="realm-8-heading">
+        <div class="realm-bg" aria-hidden="true">
+          <svg class="realm-art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+            <path class="parallax parallax-mid" d="M0 700 Q200 660 400 700 T800 700 T1200 700 T1600 700 L1600 900 L0 900 Z" fill="#241a30" opacity="0.6" />
+            <g class="parallax parallax-fast" fill="#3a2f4a" opacity="0.4">
+              <ellipse cx="240" cy="300" rx="160" ry="70" />
+              <ellipse cx="1000" cy="220" rx="200" ry="90" />
+              <ellipse cx="1400" cy="380" rx="150" ry="70" />
+            </g>
+          </svg>
+          <span class="particle particle-mist" style="--x: 15%; --delay: 0s; --dur: 20s"></span>
+          <span class="particle particle-mist" style="--x: 40%; --delay: 6s; --dur: 24s"></span>
+          <span class="particle particle-mist" style="--x: 65%; --delay: 3s; --dur: 22s"></span>
+          <span class="particle particle-mist" style="--x: 88%; --delay: 9s; --dur: 26s"></span>
+        </div>
+        <div class="realm-content">
+          <h2 id="realm-8-heading" class="realm-heading">The Underworld</h2>
+          <div class="realm-gods realm-gods-solo">
+            <article class="god-figure" data-god="hades" data-testid="god-card" tabindex="0" aria-expanded="false">
+              <svg class="god-art" viewBox="0 0 240 480" role="img" aria-label="Hades, pale and stern beneath a dark iron crown, gripping an iron bident planted at his side">
+                <defs>
+                  <linearGradient id="hades-skin" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#c3ccd9" /><stop offset="1" stop-color="#8d97a6" />
+                  </linearGradient>
+                  <linearGradient id="hades-tunic" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#241c33" /><stop offset="1" stop-color="#0a0712" />
+                  </linearGradient>
+                  <linearGradient id="hades-crown" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#7d7d8a" /><stop offset="1" stop-color="#3a3a44" />
+                  </linearGradient>
+                  <linearGradient id="hades-bident" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#b8bfc9" /><stop offset="1" stop-color="#6b7480" />
+                  </linearGradient>
+                  <linearGradient id="hades-hair" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#1c1424" /><stop offset="1" stop-color="#0a0712" />
+                  </linearGradient>
+                </defs>
+                <ellipse class="god-shadow" cx="120" cy="460" rx="75" ry="14" />
+                <path d="M96 396 L120 396 L128 404 Q108 410 88 404 Z" fill="url(#hades-skin)" />
+                <path class="god-tunic" d="M84 108 Q120 94 156 108 L172 400 Q120 434 76 392 Z" fill="url(#hades-tunic)" />
+                <path d="M96 112 L112 112 L120 220 L104 220 Z" fill="url(#hades-crown)" opacity="0.85" />
+                <path d="M92 210 Q86 300 82 388" stroke="#0a0712" stroke-width="3" fill="none" opacity="0.5" />
+                <path d="M150 210 Q158 300 164 386" stroke="#0a0712" stroke-width="3" fill="none" opacity="0.5" />
+                <path d="M120 220 L118 396" stroke="#0a0712" stroke-width="2" fill="none" opacity="0.4" />
+                <path d="M108 92 L132 92 L138 116 L102 116 Z" fill="url(#hades-skin)" />
+                <path d="M158 28 L158 400" stroke="url(#hades-bident)" stroke-width="7" />
+                <path d="M148 38 L154 6 L160 38 Z M156 34 L162 2 L168 34 Z" fill="url(#hades-bident)" />
+                <path d="M144 112 Q164 118 172 140 Q176 152 164 168 L154 160 Q164 148 160 138 Q156 126 132 118 Z" fill="url(#hades-skin)" />
+                <ellipse cx="158" cy="166" rx="8" ry="10" fill="url(#hades-skin)" />
+                <path d="M148 158 Q142 156 141 163 Q147 167 152 163 Z M150 164 Q144 164 144 171 Q150 174 154 169 Z" fill="url(#hades-skin)" />
+                <path d="M98 112 Q76 118 68 148 Q64 168 70 192 L82 188 Q76 168 80 150 Q84 134 106 120 Z" fill="url(#hades-skin)" />
+                <ellipse cx="74" cy="194" rx="8" ry="10" fill="url(#hades-skin)" />
+                <path d="M84 48 Q76 20 120 16 Q164 20 156 48 Q160 68 148 82 Q152 55 138 44 Q134 24 120 22 Q106 24 102 44 Q88 55 92 82 Q80 68 84 48 Z" fill="url(#hades-hair)" />
+                <ellipse cx="94" cy="62" rx="5" ry="8" fill="url(#hades-skin)" />
+                <ellipse cx="146" cy="62" rx="5" ry="8" fill="url(#hades-skin)" />
+                <path d="M96 50 Q94 26 120 24 Q146 26 144 50 Q144 76 130 94 Q120 102 110 94 Q96 76 96 50 Z" fill="url(#hades-skin)" />
+                <path d="M100 52 L116 56" stroke="#0a0712" stroke-width="3" stroke-linecap="round" />
+                <path d="M140 52 L124 56" stroke="#0a0712" stroke-width="3" stroke-linecap="round" />
+                <path d="M100 61 Q108 57 116 61 Q108 64 100 61 Z" fill="#0a0712" />
+                <path d="M124 61 Q132 57 140 61 Q132 64 124 61 Z" fill="#0a0712" />
+                <path d="M120 62 L118 73 L122 73 Z" fill="#707a88" />
+                <path d="M100 68 Q94 90 100 112 Q110 124 120 124 Q130 124 140 112 Q146 90 140 68 Q132 80 120 80 Q108 80 100 68 Z" fill="url(#hades-hair)" />
+                <path d="M90 30 L90 8 L105 24 L120 2 L135 24 L150 8 L150 30 Z" fill="url(#hades-crown)" />
+              </svg>
+              <h3 class="god-name">Hades <span class="roman">/ Pluto</span></h3>
+              <p class="god-domain">Ruler of the underworld; death, and its hidden wealth.</p>
+              <p class="god-story" id="story-hades" hidden>
+                Eldest son of Cronus and Rhea, Hades drew the underworld in the lots cast after
+                the Titans' fall and has ruled its silent halls ever since — rarely visiting
+                Olympus, and rarely missed there. Neither cruel nor evil so much as absolute, he
+                enforces the one law the dead cannot break: what enters the underworld does not
+                leave it, save for Persephone, whom he took as his queen and whose yearly
+                return is the one exception he allows.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
     </main>
