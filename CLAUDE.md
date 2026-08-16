@@ -215,9 +215,9 @@ main.js            scroll → realm indicator/parallax; hover/focus → story
 characters/        13 finished PNG character portraits (source of truth)
 scripts/build.ts   copies the site root into dist/ (characters/ included)
 spec/              invariants.test.ts + assignment-1.test.ts (Vitest)
-reflections/       course-required per-deliverable reflection entries
+reflections/       course-required per-deliverable entries, plus this
+                   project's dev-history lessons (reflections/reflections.md)
 PROCESS.md         course-required cited process overview + dev workflow
-reflections.md     this project's dev-history lessons (SVG → SVG → PNG)
 ```
 
 ## Character Asset System
@@ -262,8 +262,8 @@ SVG, CSS shapes, icon fonts, emoji, or geometric primitives.** If
 `characters/<Name>.png` exists, use `characters/<Name>.png`. This project
 tried building characters from SVG twice — first as simple icon-like
 silhouettes, then as anatomically-detailed human figures — and both were
-replaced by the PNG approach (full history in `reflections.md`). Do not
-revisit either approach.
+replaced by the PNG approach (full history in
+`reflections/reflections.md`). Do not revisit either approach.
 
 The website **may**: position, scale, crop-via-`object-fit`, and layer the
 PNG; animate it (opacity, transform, filter) via CSS; apply parallax and
@@ -405,8 +405,8 @@ These were deliberate calls, not defaults — flag a conflict before changing
 any of them:
 
 - **PNG character artwork, not SVG.** Two SVG approaches were tried and
-  rejected; see `reflections.md` for the full history. This is the settled
-  architecture, not one option among several.
+  rejected; see `reflections/reflections.md` for the full history. This is the
+  settled architecture, not one option among several.
 - **Bare stack (no bundler, no framework)** for this deliverable, per the
   course's "bare" template option.
 - **Relative asset URLs**, to survive the GitHub Pages subpath without a

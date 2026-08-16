@@ -31,7 +31,6 @@ const SKIP = new Set([
   "AGENTS.md",
   "PROCESS.md",
   "PLAN.md",
-  "reflections.md",
 ]);
 
 const DIST = "dist";

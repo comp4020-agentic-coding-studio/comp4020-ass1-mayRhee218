@@ -50,7 +50,7 @@ HTML/CSS/JS with no bundler or framework.
    screenshots at both marking viewports (1920×1080 and 390×844) across all
    13 gods, confirming the artwork rendered at full quality, uncropped, with
    its transparent background intact, before treating the swap as done.
-   `reflections.md` has the full before/after.
+   `reflections/reflections.md` has the full before/after.
 
 ## Before you ship
 
@@ -102,7 +102,7 @@ characters/
 
 Character artwork is always an image-generation task. Do not attempt to
 reproduce detailed human character artwork with SVG or CSS — see
-`reflections.md` for why two attempts at that failed on this project, and
+`reflections/reflections.md` for why two attempts at that failed on this project, and
 `CLAUDE.md`'s Non-Negotiable Rules.
 
 Backgrounds, particles, layout, and simple decorative shapes remain
@@ -182,7 +182,7 @@ Overall composition feels wrong
 Do not solve a website-layout problem by modifying the original character
 artwork. Do not solve a character-art problem with CSS. Keep these
 responsibilities separated — this project spent two full attempts blurring
-exactly this line before separating them (see `reflections.md`).
+exactly this line before separating them (see `reflections/reflections.md`).
 
 ## Do Not Repeat
 
@@ -194,5 +194,5 @@ exactly this line before separating them (see `reflections.md`).
 - Do not modify finished character artwork merely to solve positioning
   problems — fix the CSS/layout instead.
 - Do not add a "quick placeholder" SVG for a new character "just for now" —
-  see `reflections.md`'s "What We Would Do Differently" section on how those
+  see `reflections/reflections.md`'s "What We Would Do Differently" section on how those
   become load-bearing.
