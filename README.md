@@ -1,4 +1,4 @@
-# A Scroll-Descent Through the Twelve Olympians
+# A Scroll-Descent Through the Olympians(Gods & Goddesses)
 
 A single-page, scroll-driven journey through nine realms of Greek & Roman
 myth — from Olympus down to the Underworld — where thirteen gods and
